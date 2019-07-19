@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LCC MEDIA</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="LCC, LCC INFO MEDIA, LCC MEDIA, La Consolacion College, LCC-Bais, Bais College">
+    <meta name="description" content="LCC- INFO MEDIA, the media to all LCCians">
+    <link rel="shortcut icon" type="image/png" href="css/img/lcclogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
+    <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css.map">
+    <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css?=v.523213">
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
+
+</head>
+
+<body>
+<nav class="navbar is-hidden-mobile">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+        <span><img src="css/img/IMLogo.png"></span>
+    </a>
+  <div class="navbar-burger" data-target="navMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<div class="navbar-menu" id="navMenu">
+  <div class="navbar-start">
+    <a class="navbar-item" href="#home">
+      <h2 class="has-text-white"> Home </h2>
+    </a>
+    <a class="navbar-item" href="#news-updates">
+      <h2 class="has-text-white"> News and Updates </h2>
+    </a>
+    <a class="navbar-item" href="#gallery">
+      <h2 class="has-text-white"> Photo Gallery </h2>
+    </a>
+    <a class="navbar-item" href="#features">
+      <h2 class="has-text-white"> Merchandise </h2>
+    </a>
+  </div>
+  <div class="navbar-end">
+    <a class="modal-button navbar-item" data-target=".modal" style="cursor: pointer;">
+        <h2>Faculty Member of the month!</h2>
+    </a>
+    <a class="navbar-item" onclick="nightMode()">
+        <h2 class="night-mode">Night Mode </h2>
+    </a>
+</div>
+</nav>
+    <div id="home">
+
+        <div id="nav-burger" class="overlay">
+            <a class="closebtn" onclick="closeNav()">&times;</a>
+            <a id="night-mode" class="night-mode" onclick="nightMode()">Night Mode</a>
+            <button class="modal-button button is-warning" data-target=".modal" onclick="closeNav()"><p>Faculty member of the month!</p></button>
+            <div class="overlay-content">
+                <p class="subtitle"><a onclick="closeNav()" href="#home">Home</a></p>
+                <p class="subtitle"><a onclick="closeNav()" href="#news-updates">News and Updates</a></p>
+                <p class="subtitle"><a onclick="closeNav()" href="#gallery">Photo Gallery</a></p>
+                <p class="subtitle"><a onclick="closeNav()" href="#features">Merchandise</a></p>
+            </div>
+        </div>
+
+        <div id="nav-man" class="is-hidden-desktop">
+            <span onclick="openNav()"><button style="font-size:26px;cursor:pointer; border-radius: 5px; padding: 5px; background-color: #4FD5D6; border-color: transparent;"><p><strong>MENU☰</strong></p></button></span>
+        </div>
+        <div class="hero is-fullheight">
+            <div class="hero-body">
+                <div class="container" id="landing-page">
+                    <h1 style="font-size: `150px; color: white !important;" class="title"> LCC - INFO MEDIA <span><img  src="css/img/lcclogo.png" width="10%"></span></h1>
+                    <p style="color:    #f79c1d;"class="subtitle"><i> the media to all LCCians</i> </p>
+                    <center>
+                        <span><img src="css/img/visual.png" width="15%"></span>
+                        <span><img src="css/img/IMLogoW.png" width="15%"></span>
+                        <span><img src="css/img/mazu.png" width="15%"></span>
+                    </center>   
+                    <div id="modal" class="modal is-active">
+                        <div class="modal-background">
+                        </div>
+                        <div class="modal-content" style="overflow: hidden !important">
+                            <div class="columns is-mobile">
+                              <div class="column">
+                                <p class="subtitle has-text-centered" style="color: white;">FACULTY MEMBER OF THE MONTH</p>
+                                <img src="css/img/sample.jpg">
+                              </div>
+                              <div class="column">
+                                <p style="font-size: 15px; margin-top: 35%; color: white;" class="subtitle"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean turpis mauris, suscipit non ligula eget, ultricies suscipit turpis. Nullam volutpat, mi ac auctor gravida, leo nunc tincidunt eros, et pulvinar
+                                                magna quam eu nulla.</p>
+                              </div>
+                            </div>
+                        </div>
+                        <button class="modal-close is-large" aria-label="close">adsasd</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="news-updates" class="container">
+        <p class="title has-text-centered"> LATEST NEWS <span><img  src="css/img/news-logo.png" width="7%"></span> </p>
+        <div class="columns inner">
+            <div class="column bg-nu">
+                <h1 class="title has-text-centered"> <i> LIT: A STAR IS BORN</i></h1>
+                <p class="subtitle has-text-centered">
+                    LCC YEAR-END CONCERT</p>
+                </br>
+                <p class="subtitle has-text-centered"> DECEMBER 20, 2018</p>
+            </div>
+            <div class="column" id="featuredbg">
+            </div>
+        </div>
+        <div class="container">
+            <div class="inner">
+                <div class="columns">
+                    <div class="column">
+                        <a href="news-updates-0.html"><img src="css/img/alegre.jpg"></a>
+                        <p class="has-text-centered subtitle">Alegre 2018</p>
+                    </div>
+                    <div class="column">
+                        <a href="news-updates-1.html"><img src="css/img/mugna-pr.jpg"></a>
+                        <p class="has-text-centered subtitle">MUGNA</p>
+                    </div>
+                    <div class="column">
+                        <a href="news-updates-2.html"><img src="css/img/nutrition-pr.jpg"></a>
+                        <p class="has-text-centered subtitle">Month of Nutrition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main gallery -->
+
+    <h1 class="title has-text-centered" id="gallery">PHOTO GALLERY<span><img  src="css/img/gallery-logo-1.png" width="7%"></span></h1>
+    <div class="container inner">
+        <div">
+            </br>
+            <h1 class="subtitle has-text-centered"> <b>LCC Intramurals 2k18</b></h1>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="css/img/intramurals/cardinals.jpg"></div>
+                <div class="item"><img src="css/img/intramurals/business.jpg"></div>
+                <div class="item"><img src="css/img/intramurals/gas.jpg"></div>
+                <div class="item"><img src="css/img/intramurals/paradox.jpg"></div>
+            </div>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="css/img/intramurals/royals.jpg"></div>
+                <div class="item"><img src="css/img/intramurals/skippen.jpg"></div>
+                <div class="item"><img src="css/img/intramurals/wizards.jpg"></div>
+                <div class="item"><img src="css/img/intramurals/spartan.jpg"></div>
+            </div>
+        </div>
+    </div>
+    </br>
+    <div class="container inner">
+        <h1 class="subtitle has-text-centered"> <b>LCC Nutrition Month 2k18 </b></h1>
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="css/img/nutrition/1.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/2.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/3.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/4.jpg"></div>
+        </div>
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="css/img/nutrition/5.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/6.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/7.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/8.jpg"></div>
+        </div>
+    </div>
+
+    <!-- end main gallery -->
+
+    </br>
+    <button class="button galleryExtraButton"> See More</button>
+    </br>
+    <!-- example -->
+    <div class="container inner gallery-extra">
+        <h1 class="subtitle has-text-centered"> <b>LCC Nutrition Month 2k18 </b></h1>
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="css/img/nutrition/1.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/2.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/3.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/4.jpg"></div>
+        </div>
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="css/img/nutrition/5.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/6.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/7.jpg"></div>
+            <div class="item"><img src="css/img/nutrition/8.jpg"></div>
+        </div>
+    </div>
+    </br>
+
+    <button class="button galleryExtraButtonTwo">See Less</button>
+
+    <!-- end -->
+    </div>
+    <div id="features">
+        <div class="container">
+            <div class="inner">
+                <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/merch-logo.png" width="7%"></span></h1>
+                </br>
+                <button class="button is-medium" onclick="window.location.href='requestForm.php'">
+      ORDER NOW </button><br>
+                <div class="columns">
+                    <div class="column">
+                        <p class="subtitle has-text-centered" style="font-size: 30px !important">NEW RELEASE</p>
+                        <img src="css/img/LITShirt.jpg">
+                         <div class="subtitle has-text-centered"><p>LIT: A Star is Born / 210PHP <b><i>out of stock</i></b></p></div>
+                    </div>
+                    <div class="column">
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <img src="css/img/shirt-tribu.jpg">
+                                <div class="subtitle has-text-centered"><p>TRIBU LCCIAN SINULOG / 230PHP <b><i>out of stock</i></b></p></div>
+                            </div>
+                        </div>
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <img src="css/img/shirt-halu.jpg">
+                                <div class="subtitle has-text-centered"><p>HALU / 230PHP <b><i>out of stock</i></b></p></div>
+                            </div>
+                            <div class="column">
+                                <img src="css/img/shirt-intramurals.jpg">
+                                <div class="subtitle has-text-centered"><p>LCC Intramurals / 230PHP <b><i>out of stock</i></b></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="footer">
+        <center>
+            <p class="subtitle">Made by <strong><a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/">INFO MEDIA LCC</a></strong></p>
+        </center>
+        <br>
+        <center>
+            <a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/"><span><img src="css/img/fb.png" width="3%"></span></a>
+            <a href="#"><span><img src="css/img/insta.png" width="3%"></span></a>
+            <a href="#"><span><img src="css/img/twitter.png" width="3%"></span></a>
+            <a href="infomedialcc@gmail.com"><span><img src="css/img/gmail.png" width="3%"></span></a>
+        </center>
+    </section>
+
+    <script src="scripts/functionjs.js?v.1.2">
+    </script>
+    <script src="scripts/anchorlink.js">
+    </script>
+    <script src="owlcarousel/docs/assets/vendors/jquery.min.js"></script>
+    <script src="owlcarousel/dist/owl.carousel.min.js"></script>
+
+<script>
+        $(document).ready(function(){
+          $('.owl-carousel').owlCarousel({
+            autoplay: true,
+            center: true,
+            item: 4,
+            loop:true,
+            margin:10,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:2
+                }
+            }
+          });
+        });
+</script>
+<script>
+  $(document).ready(function(){
+    $('.modal-button').click(function(){
+      $('.modal').addClass("is-active");
+    });
+    $('.modal-close').click(function(){
+      $('.modal').removeClass("is-active");
+    });
+  });
+</script>
+<script>
+    $(document).ready(function(){
+
+    $('.gallery-extra').hide();
+    $('.galleryExtraButtonTwo').hide();
+
+    $('.galleryExtraButton').click(function(){
+      $('.gallery-extra').fadeIn();
+      $('.galleryExtraButton').hide();
+      $('.galleryExtraButtonTwo').show();
+    });
+
+    $('.galleryExtraButtonTwo').click(function(){
+        $('.gallery-extra').fadeOut();
+        $('.galleryExtraButton').show();
+        $('.galleryExtraButtonTwo').hide();
+    });
+});
+</script>
+</body>
+</html>
