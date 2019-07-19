@@ -1,20 +1,23 @@
+/*jslint node: true */
 "use strict";
 
 function openNav() {
   document.getElementById("nav-burger").style.width = "100%";
-}
+};
 function closeNav() {
   document.getElementById("nav-burger").style.width = "0%";
-}
+};
 
 function nightMode() {
 
-  let colorNight = document.getElementsByClassName("night-mode");
-
-    if(colorNight.style.color != "red"){
-      colorNight.style.color = "red";
-    } else {
-      colorNight.style.color = "";
+let colorNight = document.getElementsByClassName("night-mode");
+    
+    for(let i = 0; i < colorNight.length; i++){
+        if(colorNight.style.color != "red"){
+            colorNight.style.color = "red";
+        } else {
+            colorNight.style.color = "";
+        }
     }
 
   let nightFeature = document.querySelector('body');
