@@ -10,7 +10,7 @@ function closeNav() {
 
 function nightMode() {
 
-let colorNight = document.getElementsByClassName("night-mode");
+  let colorNight = document.getElementsByClassName("night-mode");
     
     for(let i = 0; i < colorNight.length; i++){
         if(colorNight.style.color != "red"){
