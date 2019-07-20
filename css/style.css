@@ -319,3 +319,7 @@ center > a > span > img:hover {
 .container > .owl-theme > .item > img {
     z-index: 1 !important;
 }
+
+.nightLight {
+    color: red;
+}

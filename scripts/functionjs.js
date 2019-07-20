@@ -14,15 +14,9 @@ function closeNav() {
 
 function nightMode() {
 
-    let colorNight = document.getElementsByClassName("night-mode");
+    let colorNight = document.querySelector(body);
 
-    for (let i = 0; i < colorNight.length; i++) {
-        if (colorNight[i].style.color != "red") {
-            colorNight[i].style.color = "red";
-        } else {
-            colorNight[i].style.color = "";
-        }
-    }
+    colorNight.classList.toggle(".nighLight")
 
     let nightFeature = document.querySelector('body');
 
