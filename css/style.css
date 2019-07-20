@@ -321,5 +321,5 @@ center > a > span > img:hover {
 }
 
 .nightLight {
-    color: red;
+    color: red !important;
 }
