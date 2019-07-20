@@ -5,11 +5,11 @@
 "use strict";
 
 function openNav() {
-     document.getElementById("nav-burger").style.width = "100%";
+    document.getElementById("nav-burger").style.width = "100%";
 }
 
 function closeNav() {
-     document.getElementById("nav-burger").style.width = "0%";
+    document.getElementById("nav-burger").style.width = "0%";
 }
 
 function nightMode() {
