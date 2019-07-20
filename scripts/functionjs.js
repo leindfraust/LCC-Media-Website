@@ -1,13 +1,15 @@
 /*jslint node: true */
 /*jslint white: true*/
+/*jshint esversion: 6 */
+/* jshint browser: true */
 "use strict";
 
 function openNav() {
-    document.getElementById("nav-burger").style.width = "100%";
+     document.getElementById("nav-burger").style.width = "100%";
 }
 
 function closeNav() {
-    document.getElementById("nav-burger").style.width = "0%";
+     document.getElementById("nav-burger").style.width = "0%";
 }
 
 function nightMode() {
@@ -76,7 +78,7 @@ function nightMode() {
     if (nightFeature.style.backgroundColor === "") {
         nightFeature.style.backgroundColor = "#142634";
     } else {
-        nightFeature.style.backgroundColor = ""
+        nightFeature.style.backgroundColor = "";
     }
 
     for (let i = 0; i < nightInner.length; i++) {
@@ -84,7 +86,7 @@ function nightMode() {
             nightInner[i].style.backgroundColor = "#243447";
             nightInner[i].style.borderStyle = "hidden";
         } else {
-            nightInner[i].style.backgroundColor = ""
+            nightInner[i].style.backgroundColor = "";
             nightInner[i].style.borderStyle = "solid";
         }
     }
