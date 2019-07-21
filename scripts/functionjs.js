@@ -18,7 +18,7 @@ function nightMode() {
     let colorNight = document.getElementsByClassName("night-mode");
 
     for (let i = 0; i < colorNight.length; i++) {
-        
+
         if (colorNight[i].style.color != "red") {
             colorNight[i].style.color = "red";
         } else {
