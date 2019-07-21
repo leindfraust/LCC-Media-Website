@@ -18,6 +18,7 @@ function nightMode() {
     let colorNight = document.getElementsByClassName("night-mode");
 
     for (let i = 0; i < colorNight.length; i++) {
+        
         if (colorNight[i].style.color != "red") {
             colorNight[i].style.color = "red";
         } else {
@@ -31,9 +32,9 @@ function nightMode() {
 
     let nightFooter = document.getElementsByClassName("footer");
 
-    let nightTextTitle = document.getElementsByClassName("title");
+    let nightTextTitle = document.querySelectorAll(".title:not(#arrayExceptTitle)");
 
-    let nightTextSubtitle = document.getElementsByClassName("subtitle");
+    let nightTextSubtitle = document.querySelectorAll(".subtitle:not(#arrayExceptSubtitle)");
 
     let nightNewsUpd = document.getElementsByClassName("para-news");
 

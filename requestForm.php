@@ -63,7 +63,7 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
                         <label class="label">Type of shirt, size and quantity</label>
                         <div class="control">
 
-                            <span class="select">
+                            <span class="select is-rounded">
                                 <select id="shirt" name="shirt">
                                     <option id="shirt1" name="shirt-1" selected>LIT: A Star is Born</option>
                                     <option id="shirt2" name="shirt-2">TRIBU LCCIAN SINULOG</option>
