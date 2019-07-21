@@ -2,29 +2,28 @@
 <html>
 <head>
     <title>test webpage for vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
     <div id="test">
     <ul>
-        <li v-for="name in names">   
-            {{ name.Name }}
+        <li v-for="paragraphs in paragraph">   
+            {{ paragraph }}
         </li>
     </ul>
     </div>
     
-    <script src="scripts/vue.js">
-    </script>
     <script>
         const app = new Vue ({
             el: '#test'
             data: {
-            names: []
-        },
+                paragraph: 'hello bitches'
+            },
             created() {
                 fetch('D:\XAMPP\htdocs\LCC Media Website\orderlist.json')   
                 .then(response => response.json())
                 .then(json => {
-                    this.names = json.names
+                    this.products = json.products
                 })
             }
         })
