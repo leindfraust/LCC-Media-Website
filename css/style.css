@@ -14,8 +14,12 @@ nav {
     width: 100%;
 }
 
+#img-logo > span > img {
+    margin: auto;
+}
+
 .hero-body > #landing-page {
-    margin-top: -10% !important;
+    margin-top: -15% !important;
 }
 
 .navbar {
@@ -134,9 +138,8 @@ nav {
         margin: 0 !important;
     }
 
-    .hero > .hero-body > .container > center > span > img {
-        width: 45% !important;
-        margin: 0 !important;
+    #img-logo > span > img{
+        width: 27% !important;
     }
 
     .hero > .hero-body > .container > .title {
