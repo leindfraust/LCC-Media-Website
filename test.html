@@ -7,20 +7,20 @@
 <body>
     <div id="test">
     <ul>
-        <li v-for="paragraphs in paragraph">   
-            {{ paragraph }}
+        <li v-for="product in products">   
+            {{ product.Name }}
         </li>
     </ul>
     </div>
     
     <script>
         const app = new Vue ({
-            el: '#test'
+            el: '#test',
             data: {
-                paragraph: 'hello bitches'
+                products: []
             },
             created() {
-                fetch('D:\XAMPP\htdocs\LCC Media Website\orderlist.json')   
+                fetch('orderlist.json')   
                 .then(response => response.json())
                 .then(json => {
                     this.products = json.products
