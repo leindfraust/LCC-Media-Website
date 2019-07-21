@@ -1,0 +1,10 @@
+[
+{"type":"header","version":"4.9.0.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"orders"},
+{"type":"table","name":"orderlist","database":"orders","data":
+[
+{"ID":"00066","Name":"Romel D. Zerna Jr.","YearSectionORAddress":"1-BSIT","MobileNumber":"3235468965","ShirtName":"TRIBU LCCIAN SINULOG","ShirtType":"TRSNG","ShirtSize":"XL","Quantity":"1","OIG":"MAZU1662019"},
+{"ID":"00067","Name":"Romel D. Zerna Jr.","YearSectionORAddress":"1-BSIT","MobileNumber":"9261434650","ShirtName":"TRIBU LCCIAN SINULOG","ShirtType":"TRSNG","ShirtSize":"M","Quantity":"1","OIG":"MAZU1762019"}
+]
+}
+]

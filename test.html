@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test webpage for vue</title>
+</head>
+<body>
+    <div id="test">
+    <ul>
+        <li v-for="name in names">   
+            {{ name.Name }}
+        </li>
+    </ul>
+    </div>
+    
+    <script src="scripts/vue.js">
+    </script>
+    <script>
+        const app = new Vue ({
+            el: '#test'
+            data: {
+            names: []
+        },
+            created() {
+                fetch('D:\XAMPP\htdocs\LCC Media Website\orderlist.json')   
+                .then(response => response.json())
+                .then(json => {
+                    this.names = json.names
+                })
+            }
+        })
+    </script>
+</body>
+</html>

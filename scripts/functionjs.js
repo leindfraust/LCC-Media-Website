@@ -4,6 +4,8 @@
 /* jshint browser: true */
 "use strict";
 
+/*vanilla javascript, toggling night-mode function */
+
 function openNav() {
     document.getElementById("nav-burger").style.width = "100%";
 }
