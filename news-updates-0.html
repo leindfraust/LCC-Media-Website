@@ -50,14 +50,11 @@
     </div>
     <br>
     <!-- the body of the article-->
-    <div class="container para-news"><br>
-        <p class="subtitle has-text-centered">A celebration of friendship, happiness, and solidarity is the real essence of an Acquaintance Party. The most awaited event was held at the LCC quadrangle last July 28, 2018 at exactly 1-4 pm for the elementary and junior high school and 5-10 pm for the senior high school and college students.
-            Few days before the most anticipated event of La Consolacion College¬ - Bais City, everyone was so excited and quite confused in choosing their attires which are primarily Cuban, Jamaican, and Mexican inspired. Almost everyone was dazzling and have showcased impressive God given talents during the talent showcase.
-        </p>
-        <p class="subtitle has-text-centered">“Alegre” was this year’s theme for the Acquaintance Party 2018. Alegre means to be happy, glad, and cheerful. It was indeed filled with happiness since everyone were given the chance to thank the people who gave them happiness. The freshmen were very much eager to meet and bond with their seniors for it was the perfect time to gather, interact, bond, and share memories that would probably last a lifetime.
+    <div id="paragraph" class="container para-news"><br>
+        <p class="subtitle has-text-centered">{{paragraphs}}
+        <br><br>“Alegre” was this year’s theme for the Acquaintance Party 2018. Alegre means to be happy, glad, and cheerful. It was indeed filled with happiness since everyone were given the chance to thank the people who gave them happiness. The freshmen were very much eager to meet and bond with their seniors for it was the perfect time to gather, interact, bond, and share memories that would probably last a lifetime.
             The whole institution of LCC was filled with euphoric and energetic souls. The LCC community doesn’t seem shaken as raindrops showered through the splendid night and tried to cause impairment to every students perfect party get up. Almost everyone striked a pose and uploaded photos with equally artistic captions. Some students are given the chance to take a photo with their crushes and some are contented in posing with their lavish OOTD’s.
-        </p>
-        <p class="subtitle has-text-centered">The most used hashtags are #YOU are my Alegre, #Alegre2018 and #TheLCCAcquaintanceParty. Indeed, this year’s acquaintance party just proved everyone that it’s more fun in LCC and that LCCians are fun to be with.
+        <br><br>The most used hashtags are #YOU are my Alegre, #Alegre2018 and #TheLCCAcquaintanceParty. Indeed, this year’s acquaintance party just proved everyone that it’s more fun in LCC and that LCCians are fun to be with.
         </p><br>
     </div>
 
@@ -91,6 +88,15 @@
     </section>
 
     <script src="scripts/functionjs.js"></script>
+    <script src="scripts/vue.js"></script>
+    <script>
+        const app = new Vue ({
+            el: '#paragraph',
+            data: {
+                paragraphs: "hello boi"
+            }
+        })
+    </script>
 </body>
 
 </html>
