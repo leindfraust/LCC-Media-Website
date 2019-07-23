@@ -1,3 +1,9 @@
+<?php session_start();
+ if(!isset($_SESSION['admin'])){
+        header("Location:admin.php");
+     }
+          echo "Login Success";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,14 +19,17 @@
         #myapp {
             padding: 50px;
         }
+
         @media screen and (max-width: 1000px) {
             #myapp {
                 padding: 0 !important;
             }
+
             .input {
-                width:  45% !important;
+                width: 45% !important;
             }
         }
+
     </style>
 </head>
 
@@ -28,8 +37,8 @@
     <div id="myapp">
         <button type="button" class="button is-primary" @click='allRecords()'>Fetch all records</button>
         <div><br>
-        <button type="button" class="button is-info" @click='selectByRecords()'>Search records... </button>
             <input type="text" class="input" style="width:  10%" v-model="ID" name="ID" placeholder="input user ID">
+            <button type="button" class="button is-info" @click='selectByRecords()'>Search records... </button>
         </div>
         <center> <br>
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -58,17 +67,19 @@
                     <td>{{ order.OIG }}</td>
                     <td>{{ order.Status }}</td>
                 </tr>
-            </table></center>
-            <br><br>
-            <form action="scripts/successStatusSQL.php">
-                <button type="submit" value="submit" name="ready" class="button is-success">Update status to "ready for pick-up/delivery"</button>
-                <input type="text" class="input" name="IDNo" style="width: 10%" placeholder="input ID">
-            </form><br>
-            <form action="scripts/pendingStatusSQL.php">
-                <button type="submit" value="submit" name="ready" class="button is-danger">Update status to "pending"</button>
-                <input type="text" class="input" name="IDNo" style="width: 10%" placeholder="input ID">
-            </form>
-            </div>
+            </table>
+        </center>
+        <br><br>
+        <form action="scripts/successStatusSQL.php">
+            <input type="text" class="input" name="IDNo" style="width: 10%" placeholder="input ID">
+            <button type="submit" value="submit" name="ready" class="button is-success">Update status to "ready for pick-up/delivery"</button>
+        </form><br>
+        <form action="scripts/pendingStatusSQL.php">
+            <input type="text" class="input" name="IDNo" style="width: 10%" placeholder="input ID">
+            <button type="submit" value="submit" name="ready" class="button is-danger">Update status to "pending"</button>
+        </form><br>
+        <button class="button is-warning"><a href="scripts/logout.php">Log Out</a></button>
+    </div>
     <script>
         let app = new Vue({
             el: '#myapp',

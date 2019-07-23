@@ -6,7 +6,7 @@ include "config.php";
     $sql = "UPDATE orderlist SET Status='ready for pick-up/delivery' WHERE ".$index;
 
     if (mysqli_query($con, $sql)) {
-    echo 'Record updated successfully click <a href="../data-display.html">here</a> to return';
+    echo 'Record updated successfully click <a href="../data-display.php">here</a> to return';
     } else {
     echo "Error updating record: " . mysqli_error($con);
     }
