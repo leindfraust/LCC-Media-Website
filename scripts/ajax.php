@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include 'config.php';
 
 $condition = "1";
 if(isset($_GET['ID'])){

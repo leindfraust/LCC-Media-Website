@@ -3,49 +3,64 @@
 
 <head>
     <title></title>
+    <link rel="shortcut icon" type="image/png" href="css/img/lcclogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
+    <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css.map">
     <script src="scripts/vue.js"></script>
     <script src="scripts/axios-master/dist/axios.min.js"></script>
+    <style>
+        #myapp {
+            padding: 50px;
+        }
+        @media screen and (max-width: 1000px) {
+            #myapp {
+                padding: 0 !important;
+            }
+            .input {
+                width:  45% !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div id="myapp">
-        <input type="button" @click='allRecords()' value="Select All users">
-        <br>
+        
+        <button type="button" class="button is-primary" @click='allRecords()'>Select all records</button>
+        <button type="button" class="button is-info" @click='selectByRecords()'>Search records... </button>
+        <input type="text" class="input" style="width:  10%" v-model="ID" placeholder="input user ID">
+        <center> <br>
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                <tr>
+                    <th>Name</th>
+                    <th>YearSectionORAddress</th>
+                    <th>MobileNumber</th>
+                    <th>ShirtName</th>
+                    <th>ShirtType</th>
+                    <th>ShirtSize</th>
+                    <th>Quantity</th>
+                    <th>OIG</th>
+                </tr>
 
-        <input type="text" v-model="ID" placeholder="input user ID">
-        <input type="button" @click='selectByRecords()' value="select user by ID">
-        <br>
-
-        <table border="1" width="80%" style="border-collapse: collapse;">
-            <tr>
-                <th>Name</th>
-                <th>YearSectionORAddress</th>
-                <th>MobileNumber</th>
-                <th>ShirtName</th>
-                <th>ShirtType</th>
-                <th>ShirtSize</th>
-                <th>Quantity</th>
-                <th>OIG</th>
-            </tr>
-
-            <tr v-for="order in orders">
-                <td>{{ order.Name }}</td>
-                <td>{{ order.YearSectionORAddress }}</td>
-                <td>{{ order.MobileNumber }}</td>
-                <td>{{ order.ShirtName }}</td>
-                <td>{{order.ShirtType}}</td>
-                <td>{{ order.ShirtSize }}</td>
-                <td>{{ order.Quantity }}</td>
-                <td>{{ order.OIG }}</td>
-            </tr>
-        </table>
-    </div>
+                <tr v-for="order in orders">
+                    <td>{{ order.Name }}</td>
+                    <td>{{ order.YearSectionORAddress }}</td>
+                    <td>{{ order.MobileNumber }}</td>
+                    <td>{{ order.ShirtName }}</td>
+                    <td>{{order.ShirtType}}</td>
+                    <td>{{ order.ShirtSize }}</td>
+                    <td>{{ order.Quantity }}</td>
+                    <td>{{ order.OIG }}</td>
+                </tr>
+            </table>
+        </center></div>
     <script>
         let app = new Vue({
             el: '#myapp',
             data: {
                 orders: "",
-                ID: 0
+                ID: "00000"
             },
             methods: {
                 allRecords: function() {
@@ -61,7 +76,7 @@
                 selectByRecords: function() {
                     if (this.ID > 0) {
 
-                        axios.get('ajax.php', {
+                        axios.get('scripts/ajax.php', {
                                 params: {
                                     ID: this.ID
                                 }
