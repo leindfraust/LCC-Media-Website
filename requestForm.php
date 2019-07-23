@@ -13,8 +13,9 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
 		$shirtSize = $_POST['size'];
 		$quantity = $_POST['quantity'];
 		$OIG = $_POST['DateBrand'];
+        $Status = $_POST['status'];
 
-		$query = "INSERT INTO orderlist (Name, YearSectionORAddress, MobileNumber, ShirtName,ShirtType, ShirtSize, Quantity, OIG) VALUES ('$Name','$YearSectionORAddress','$mobileNumber','$shirtName','$shirtType', '$shirtSize', '$quantity', '$OIG')";
+		$query = "INSERT INTO orderlist (Name, YearSectionORAddress, MobileNumber, ShirtName,ShirtType, ShirtSize, Quantity, OIG, Status) VALUES ('$Name','$YearSectionORAddress','$mobileNumber','$shirtName','$shirtType', '$shirtSize', '$quantity', '$OIG', '$Status')";
 
 		if(mysqli_query($db, $query)) {
 			$query = mysqli_query($db, "SELECT * FROM orderlist ORDER BY ID DESC LIMIT 1");
@@ -46,6 +47,7 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
         <div class="field">
             <h1 class="subtitle has-text-centered"> ORDER FORM </h1>
             <input type="hidden" id="getDate" name="DateBrand">
+            <input type="hidden" id="status" name="status">
             <label class="label">Full Name</label>
             <div class="control">
                 <input type="text" name="fullName" placeholder="your full name" /required> </div> <p class="help">Input your full name (e.g. John Smith Doe) </p><br>
@@ -107,6 +109,7 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
         let year = date.getFullYear();
 
         $('.fullsub').click(function() {
+            $('#status').val("pending");
             $('#getDate').val("MAZU" + day + "" + month + "" + year);
             switch ($('#shirt option:selected').attr("name")) {
                 case "shirt-1":

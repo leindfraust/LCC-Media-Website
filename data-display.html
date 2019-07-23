@@ -27,9 +27,14 @@
 <body>
     <div id="myapp">
         
-        <button type="button" class="button is-primary" @click='allRecords()'>Select all records</button>
+        <button type="button" class="button is-primary" @click='allRecords()'>Fetch all records</button>
+        <div><br>
         <button type="button" class="button is-info" @click='selectByRecords()'>Search records... </button>
-        <input type="text" class="input" style="width:  10%" v-model="ID" placeholder="input user ID">
+        <form method="get" action="scripts/getValue.php">
+            <input type="text" class="input" style="width:  10%" v-model="ID" placeholder="input user ID">
+        </form>
+            
+        </div>
         <center> <br>
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <tr>
@@ -41,6 +46,7 @@
                     <th>ShirtSize</th>
                     <th>Quantity</th>
                     <th>OIG</th>
+                    <th>Status</th>
                 </tr>
 
                 <tr v-for="order in orders">
@@ -52,8 +58,13 @@
                     <td>{{ order.ShirtSize }}</td>
                     <td>{{ order.Quantity }}</td>
                     <td>{{ order.OIG }}</td>
+                    <td>{{ order.Status }}</td>
                 </tr>
             </table>
+            <br>
+            <form method="post" action="scripts/updateSQL.php">
+                <button type="submit" class="button is-danger">Update status to "ready for pick-up/delivery"</button>
+            </form>
         </center></div>
     <script>
         let app = new Vue({
