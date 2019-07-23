@@ -76,7 +76,11 @@
         </form><br>
         <form action="scripts/pendingStatusSQL.php">
             <input type="text" class="input" name="IDNo" style="width: 10%" placeholder="input ID">
-            <button type="submit" value="submit" name="ready" class="button is-danger">Update status to "pending"</button>
+            <button type="submit" value="submit" name="ready" class="button is-link">Update status to "pending"</button>
+        </form><br>
+        <form action="scripts/deleteColSQL.php">
+            <input type="text" class="input" name="IDNo" style="width: 10%" placeholder="input ID">
+            <button type="submit" value="submit" name="ready" class="button is-danger">Delete record</button>
         </form><br>
         <button class="button is-warning"><a href="scripts/logout.php">Log Out</a></button>
     </div>

@@ -5,7 +5,7 @@ $condition = "1";
 if(isset($_GET['ID'])){
    $condition = " ID=".$_GET['ID'];
 }
-$userData = mysqli_query($con,"SELECT * from orderlist WHERE ".$condition);
+$userData = mysqli_query($con,"SELECT * from orderlist WHERE '$condition' ");
 
 $response = array();
 

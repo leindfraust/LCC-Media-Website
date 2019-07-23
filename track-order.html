@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test webpage for vue</title>
+    <link rel="shortcut icon" type="image/png" href="css/img/lcclogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
+    <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css.map">
+    <script src="scripts/vue.js"></script>
+    <script src="scripts/axios-master/dist/axios.min.js"></script>
+    <style>
+        .input {
+            width: 50%;
+            display: block
+        }
+    </style>
+</head>
+
+<body>
+    <div id="track">
+        <center> <br>
+            OIG<input type="text" class="input" v-model="OIG" name="OIG">
+            ShirtType<input type="text" class="input" v-model="ShirtType" name="ShirtType">
+            ID<input type="text" class="input" v-model="ID" name="ID"><br>
+            <button class="button is-primary" @click='trackIt()'>Track Order</button>
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>YearSectionORAddress</th>
+                    <th>MobileNumber</th>
+                    <th>ShirtName</th>
+                    <th>ShirtType</th>
+                    <th>ShirtSize</th>
+                    <th>Quantity</th>
+                    <th>OIG</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr v-for="order in orders">
+                    <td>{{order.ID}}</td>
+                    <td>{{ order.Name }}</td>
+                    <td>{{ order.YearSectionORAddress }}</td>
+                    <td>{{ order.MobileNumber }}</td>
+                    <td>{{ order.ShirtName }}</td>
+                    <td>{{order.ShirtType}}</td>
+                    <td>{{ order.ShirtSize }}</td>
+                    <td>{{ order.Quantity }}</td>
+                    <td>{{ order.OIG }}</td>
+                    <td>{{ order.Status }}</td>
+                </tr>
+            </table>
+        </center>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#track',
+            data: {
+                orders: "",
+                OIG: "0000000",
+                ShirtType: "ShirtType",
+                ID: "00000"
+            },
+            methods: {
+                trackIt: function(){
+                    axios.get('scripts/orderTrack.php', {
+                            params: {
+                                ID: this.ID,
+                                OIG: this.OIG,
+                                ShirtType: this.ShirtType
+                            }
+                        })
+                        .then(function(response){
+                            app.orders = response.data;
+                        })
+                        .catch(function(error){
+                            console.log(error);
+                        });
+            }
+        }
+        })
+
+    </script>
+</body>
+
+</html>

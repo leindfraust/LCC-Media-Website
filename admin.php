@@ -30,22 +30,34 @@ include 'scripts/config.php';
             width: 50%;
         }
         form {
-            margin-top: 13%;
+            margin-top: 10%;
         }
         @media screen and (max-width: 1000px) {
             .input {
                 width: 40% !important;
             }
+            h1 {
+                width: 100% !important;
+                padding: 5 !important;
+            }
         }
-
+        h1 {
+            background-color: blanchedalmond;
+            border-radius: 15px;
+            width: 20%;
+            padding: 35px
+        }
+        html {
+            background: url(css/img/experiencelcc.jpg) center center;
+            background-size: cover;
+        }
     </style>
 </head>
 
 <body>
     <center>
         <form method="post">
-            <h1 class="title has-text-centered">LCC-Bais InfoMedia</h1>
-            <h1 class="title has-text-centered">ADMIN PAGE</h1>
+            <h1 class="title has-text-centered">LCC-Bais <br>ADMIN PAGE</h1>
             <input type="text" class="input" placeholder="input code" name="code">
             <button type="submit" value="submit" class="button is-primary">ENTER</button>
         </form>
