@@ -26,7 +26,6 @@
 
 <body>
     <div id="myapp">
-        
         <button type="button" class="button is-primary" @click='allRecords()'>Fetch all records</button>
         <div><br>
         <button type="button" class="button is-info" @click='selectByRecords()'>Search records... </button>
@@ -35,6 +34,7 @@
         <center> <br>
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>YearSectionORAddress</th>
                     <th>MobileNumber</th>
@@ -47,6 +47,7 @@
                 </tr>
 
                 <tr v-for="order in orders">
+                    <td>{{order.ID}}</td>
                     <td>{{ order.Name }}</td>
                     <td>{{ order.YearSectionORAddress }}</td>
                     <td>{{ order.MobileNumber }}</td>
@@ -57,12 +58,13 @@
                     <td>{{ order.OIG }}</td>
                     <td>{{ order.Status }}</td>
                 </tr>
-            </table>
-            <br>
-            <form method="post" action="scripts/updateSQL.php">
-                <button type="submit" name="ready" class="button is-danger">Update status to "ready for pick-up/delivery"</button>
+            </table></center>
+            <br><br>
+            <form method="get" action="scripts/updateSQL.php">
+                <button type="submit" value="submit" name="ready" class="button is-danger">Update status to "ready for pick-up/delivery"</button>
+                <input type="text" class="input" name="IDNo" style="width: 10%" placeholder="input ID">
             </form>
-        </center></div>
+            </div>
     <script>
         let app = new Vue({
             el: '#myapp',
