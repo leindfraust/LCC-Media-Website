@@ -1,8 +1,8 @@
 <?php 
-include "scripts/config.php";
+include 'config.php';
 
 $condition = "1";
-if(isset($GET_['ID'])){
-    $condition = " ID=".$_GET['ID'];
+if(isset($_GET['ID'])){
+   $condition = " ID=".$_GET['ID'];
 }
 ?>
