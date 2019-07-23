@@ -65,7 +65,7 @@
             methods: {
                 allRecords: function() {
 
-                    axios.get('ajax.php')
+                    axios.get('scripts/ajax.php')
                         .then(function(response) {
                             app.orders = response.data;
                         })
