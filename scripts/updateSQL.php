@@ -3,7 +3,7 @@ include "config.php";
 
     $index = "ID=".$_GET['IDNo']; 
 
-    $sql = "UPDATE orderlist SET Status='pending' WHERE ".$index;
+    $sql = "UPDATE orderlist SET Status='ready for pick-up/delivery' WHERE ".$index;
 
     if (mysqli_query($con, $sql)) {
     echo 'Record updated successfully click <a href="../data-display.html">here</a> to return';
