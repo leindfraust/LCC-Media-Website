@@ -60,8 +60,12 @@
                 </tr>
             </table></center>
             <br><br>
-            <form method="get" action="scripts/updateSQL.php">
-                <button type="submit" value="submit" name="ready" class="button is-danger">Update status to "ready for pick-up/delivery"</button>
+            <form action="scripts/successStatusSQL.php">
+                <button type="submit" value="submit" name="ready" class="button is-success">Update status to "ready for pick-up/delivery"</button>
+                <input type="text" class="input" name="IDNo" style="width: 10%" placeholder="input ID">
+            </form><br>
+            <form action="scripts/pendingStatusSQL.php">
+                <button type="submit" value="submit" name="ready" class="button is-danger">Update status to "pending"</button>
                 <input type="text" class="input" name="IDNo" style="width: 10%" placeholder="input ID">
             </form>
             </div>
