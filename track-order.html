@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>test webpage for vue</title>
+    <title>track your order</title>
     <link rel="shortcut icon" type="image/png" href="css/img/lcclogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
@@ -10,29 +10,46 @@
     <script src="scripts/vue.js"></script>
     <script src="scripts/axios-master/dist/axios.min.js"></script>
     <style>
+        #track {
+            padding: 50px;
+        }
+        html {
+            background-color: aquamarine
+        }
         .input {
-            width: 50%;
+            width: 20%;
             display: block
         }
+
+        @media screen and (max-width: 1000px) {
+            #track {
+                padding: 0 !important;
+            }
+
+            .input {
+                width: 50%;
+            }
+
     </style>
 </head>
 
 <body>
+    <p style="color: red">If you want to cancel your order, please visit the IMC Office in the BED Library or drop us a message on <a href="https://www.facebook.com/IMLCCBAIS">facebook</a>.</p>
     <div id="track">
         <center> <br>
-            OIG<input type="text" class="input" v-model="OIG" name="OIG">
-            ShirtType<input type="text" class="input" v-model="ShirtType" name="ShirtType">
-            ID<input type="text" class="input" v-model="ID" name="ID"><br>
-            <button class="button is-primary" @click='trackIt()'>Track Order</button>
+            <label class="label">OIG</label><input type="text" class="input" v-model="OIG" name="OIG" placeholder="e.g MAZU0000000">
+            <label class="label">ShirtType</label><input type="text" class="input" v-model="ShirtType" name="ShirtType" placeholder="e.g TRSNG, HL ...">
+            <label class="label">ID</label><input type="text" class="input" v-model="ID" name="ID" placeholder="e.g 00001, 00002 ...">
+            <button class="button is-primary" @click='trackIt()'>Track Order</button><br><br>
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>YearSectionORAddress</th>
-                    <th>MobileNumber</th>
-                    <th>ShirtName</th>
-                    <th>ShirtType</th>
-                    <th>ShirtSize</th>
+                    <th>YearSection/Address</th>
+                    <th>Mobile Number</th>
+                    <th>Shirt Name</th>
+                    <th>Shirt Type</th>
+                    <th>Shirt Size</th>
                     <th>Quantity</th>
                     <th>OIG</th>
                     <th>Status</th>
@@ -59,12 +76,12 @@
             el: '#track',
             data: {
                 orders: "",
-                OIG: "0000000",
-                ShirtType: "ShirtType",
-                ID: "00000"
+                OIG: "",
+                ShirtType: "",
+                ID: ""
             },
             methods: {
-                trackIt: function(){
+                trackIt: function() {
                     axios.get('scripts/orderTrack.php', {
                             params: {
                                 ID: this.ID,
@@ -72,14 +89,14 @@
                                 ShirtType: this.ShirtType
                             }
                         })
-                        .then(function(response){
+                        .then(function(response) {
                             app.orders = response.data;
                         })
-                        .catch(function(error){
+                        .catch(function(error) {
                             console.log(error);
                         });
+                }
             }
-        }
         })
 
     </script>

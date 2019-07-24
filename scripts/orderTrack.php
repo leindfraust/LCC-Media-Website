@@ -1,21 +1,13 @@
 <?php
 include 'config.php';
 
-$condition = "1";
-if(isset($_GET['ID'])){
-   $condition = " ID=".$_GET['ID'];
-}
 
-$conditionTwo = "1";
-if(isset($_GET['OIG'])){
-   $conditionTwo = $_GET['OIG'];
-}
-$conditionThree = "1";
-if(isset($_GET['ShirtType'])){
-   $conditionThree = $_GET['ShirtType'];
-}
+$getID = $_GET['ID'];
+$getST = $_GET['ShirtType'];
+$getOIG = $_GET['OIG'];
 
-$userData = mysqli_query($con,"SELECT * from orderlist WHERE '$condition' AND OIG='$conditionTwo' AND ShirtType='$conditionThree' ");
+
+$userData = mysqli_query($con,"SELECT * from orderlist WHERE ID='$getID' AND OIG='$getOIG' AND ShirtType='$getST' ");
 
 $response = array();
 

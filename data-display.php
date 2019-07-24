@@ -8,7 +8,7 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Data Display</title>
     <link rel="shortcut icon" type="image/png" href="css/img/lcclogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
@@ -45,11 +45,11 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>YearSectionORAddress</th>
-                    <th>MobileNumber</th>
-                    <th>ShirtName</th>
-                    <th>ShirtType</th>
-                    <th>ShirtSize</th>
+                    <th>YearSection/Address</th>
+                    <th>Mobile Number</th>
+                    <th>Shirt Name</th>
+                    <th>Shirt Type</th>
+                    <th>Shirt Size</th>
                     <th>Quantity</th>
                     <th>OIG</th>
                     <th>Status</th>

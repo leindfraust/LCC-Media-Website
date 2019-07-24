@@ -48,7 +48,7 @@ include 'scripts/config.php';
             padding: 35px
         }
         html {
-            background: url(css/img/experiencelcc.jpg) center center;
+            background: url(css/img/experiencelcc.jpg)no-repeat center center;
             background-size: cover;
         }
     </style>
@@ -57,7 +57,7 @@ include 'scripts/config.php';
 <body>
     <center>
         <form method="post">
-            <h1 class="title has-text-centered">LCC-Bais <br>ADMIN PAGE</h1>
+            <h1 class="title has-text-centered">IMLCC-Bais <br>ADMIN PAGE</h1>
             <input type="text" class="input" placeholder="input code" name="code">
             <button type="submit" value="submit" class="button is-primary">ENTER</button>
         </form>
