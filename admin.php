@@ -12,7 +12,7 @@ include 'scripts/config.php';
             $_SESSION['admin'] = 'true';
             header('location:data-display.php');
         } else {
-            echo "something wrong";
+            echo "wrong code";
         }
 }
 ?>

@@ -20,7 +20,7 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
 		if(mysqli_query($db, $query)) {
 			$query = mysqli_query($db, "SELECT * FROM orderlist ORDER BY ID DESC LIMIT 1");
 			$last_id = mysqli_fetch_row($query);
-			echo '<h3 style="display: block; background-color: black; z-index: 4; position: absolute; bottom: 50%;  color: white; padding: 15px; text-align: center;"> Your order has been recieved and is being processed, we will contact you soon through a text. Please click  <a href="index.html"> here </a> to avoid multiple order registrations or click <a href="requestForm.php"> here </a> to order again. Thank you for your understanding! Your ticket order is: '.$last_id[8].'-'.$last_id[5].''.$last_id[0].' </h3> ';
+			echo '<h3 style="display: block; background-color: black; z-index: 4; position: absolute; bottom: 50%;  color: white; padding: 15px; text-align: center;"> Your order has been recieved and is being processed, we will contact you soon through a text message. Please click  <a href="index.html"> here </a> to avoid multiple order registrations or click <a href="requestForm.php"> here </a> to order again. Thank you for your understanding! Your ticket order is: '.$last_id[8].'-'.$last_id[5].''.$last_id[0].' <br>            Track your order <a href="track-order.html">here</a> </h3> ';
 		}
 	}
 ?>
@@ -38,7 +38,7 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?=v.4">
+    <link rel="stylesheet" type="text/css" href="css/style.css?=v.5">
     <link rel="stylesheet" href="css/customButton.css">
 </head>
 
