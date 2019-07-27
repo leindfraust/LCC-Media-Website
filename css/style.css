@@ -157,7 +157,7 @@ nav {
     }
 
     .field {
-        border: 1px solid #d3d3d3;
+        border: 1px solid transparent;
         position: absolute;
         bottom: 0% !important;
         padding: 15px !important;
@@ -175,7 +175,6 @@ nav {
     }
 
     input {
-        padding: 0 !important;
         width: auto !important
     }
 
@@ -281,13 +280,13 @@ nav {
 }
 
 .field {
-    border: 1px solid #d3d3d3;
+    border: 1px solid transparent;
     position: absolute;
     bottom: 2%;
     padding: 25px;
     left: 25%;
     right: 25%;
-    top: 2%;
+    top: .1%;
     border-radius: 15px;
 }
 
@@ -301,6 +300,8 @@ nav {
 input {
     padding: 10px;
     width: 300px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
 }
 
 center > a > span > img:hover {
