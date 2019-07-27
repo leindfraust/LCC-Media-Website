@@ -38,7 +38,7 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?=v.5">
+    <link rel="stylesheet" type="text/css" href="css/style.css?=v.123143">
     <link rel="stylesheet" href="css/customButton.css">
 </head>
 
@@ -58,7 +58,7 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
                     <label class="label">Mobile Number (for contacting you) </label>
                     <div class="control">
                         <input type="number" name="mobileNumber" placeholder="your mobile number" /required> </div> <p class="help">Input your mobile number (e.g. 09888888888) </p>
-                        <p class="help">We won't disclose your information as prescribed by the law. </p><br>
+                        <p class="help is-danger">We won't disclose your information as prescribed by the law. </p><br>
                         <label class="label">Type of shirt, size and quantity</label>
                         <div class="control">
 
