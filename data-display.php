@@ -36,9 +36,11 @@
 <body>
     <div id="myapp">
         <button type="button" class="button is-primary" @click='allRecords()'>Fetch all records</button>
+        <button type="button" class="button is-info" @click='byPending()'>Fetch all records that are "pending"</button>
+        <button type="button" class="button is-success" @click='byReady()'>Fetch all records that are "ready for pick-up/delivery"</button>
         <div><br>
             <input type="text" class="input" style="width:  10%" v-model="ID" name="ID" placeholder="input user ID">
-            <button type="button" class="button is-info" @click='selectByRecords()'>Search records... </button>
+            <button type="button" class="button" @click='selectByRecords()'>Search records... </button>
         </div>
         <center> <br>
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -89,7 +91,7 @@
             el: '#myapp',
             data: {
                 orders: "",
-                ID: "00000"
+                ID: ""
             },
             methods: {
                 allRecords: function() {
@@ -117,7 +119,25 @@
                                 console.log(error);
                             });
                     }
-                }
+                },
+                byPending: function() {
+                    axios.get('scripts/getPendingSQL.php')
+                    .then(function(response){
+                        app.orders = response.data;
+                    })
+                    .catch(function(error){
+                        console.log(error);
+                    })
+            },
+                byReady: function() {
+                    axios.get('scripts/getReadySQL.php')
+                    .then(function(response){
+                        app.orders = response.data;
+                    })
+                    .catch(function(error){
+                        console.log(error);
+                    })
+            }
             }
         })
 
