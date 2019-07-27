@@ -53,7 +53,7 @@
                     <th>Shirt Type</th>
                     <th>Shirt Size</th>
                     <th>Quantity</th>
-                    <th>OIG</th>
+                    <th>Brand</th>
                     <th>Status</th>
                 </tr>
 
@@ -122,22 +122,22 @@
                 },
                 byPending: function() {
                     axios.get('scripts/getPendingSQL.php')
-                    .then(function(response){
-                        app.orders = response.data;
-                    })
-                    .catch(function(error){
-                        console.log(error);
-                    })
-            },
+                        .then(function(response) {
+                            app.orders = response.data;
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                        })
+                },
                 byReady: function() {
                     axios.get('scripts/getReadySQL.php')
-                    .then(function(response){
-                        app.orders = response.data;
-                    })
-                    .catch(function(error){
-                        console.log(error);
-                    })
-            }
+                        .then(function(response) {
+                            app.orders = response.data;
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                        })
+                }
             }
         })
 
