@@ -4,7 +4,7 @@ include 'scripts/config.php';
     
     $code = $_POST['code'];
     
-        $sql = "SELECT * FROM admins WHERE Code='$code' ";
+        $sql = "SELECT * FROM journalists WHERE Code='$code' ";
         $result = mysqli_query($con,$sql);
         
         if(mysqli_num_rows($result)==1){
@@ -20,7 +20,7 @@ include 'scripts/config.php';
 <html>
 
 <head>
-    <title>Admin</title>
+    <title>Journalist Login</title>
     <link rel="shortcut icon" type="image/png" href="css/img/lcclogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
