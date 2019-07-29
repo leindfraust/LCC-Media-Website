@@ -10,13 +10,12 @@
 
     $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
     
-    extract($_POST);
-    if(isset($submit)){
+    if(isset($_POST['submit'])){
         $Author = $_POST['author'];
-        $Summary = "<pre>$authorsummary</pre>";
-        $paragraph_1 = "<pre>$paragraph1</pre>";
-        $paragraph_2 = "<pre>$paragraph2</pre>";
-        $paragraph_3 = "<pre>$paragraph3</pre>";
+        $Summary = mysqli_real_escape_string($con, $_POST['authorsummary']);
+        $paragraph_1 = mysqli_real_escape_string($con, $_POST['paragraph1']);
+        $paragraph_2 = mysqli_real_escape_string($con, $_POST['paragraph2']);
+        $paragraph_3 = mysqli_real_escape_string($con, $_POST['paragraph3']);
         
         $query = "INSERT INTO journalwrite(Author, Summary, Paragraph_1, Paragraph_2, Paragraph_3) VALUES('$Author', '$Summary', '$paragraph_1', '$paragraph_2', '$paragraph_3')";
 
