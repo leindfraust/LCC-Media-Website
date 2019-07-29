@@ -9,13 +9,14 @@
     include "scripts/config.php";
 
     $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
-
-    if(isset($_POST['submit'])){
+    
+    extract($_POST);
+    if(isset($submit)){
         $Author = $_POST['author'];
-        $Summary = $_POST['author-summary'];
-        $paragraph_1 = $_POST['paragraph-1'];
-        $paragraph_2 = $_POST['paragraph-2'];
-        $paragraph_3 = $_POST['paragraph-3'];
+        $Summary = "<pre>$authorsummary</pre>";
+        $paragraph_1 = "<pre>$paragraph1</pre>";
+        $paragraph_2 = "<pre>$paragraph2</pre>";
+        $paragraph_3 = "<pre>$paragraph3</pre>";
         
         $query = "INSERT INTO journalwrite(Author, Summary, Paragraph_1, Paragraph_2, Paragraph_3) VALUES('$Author', '$Summary', '$paragraph_1', '$paragraph_2', '$paragraph_3')";
 
@@ -90,7 +91,7 @@
         <input type="file" name="authorimg"><br>
         
         <label class="label">Summary</label>
-        <textarea class="textarea" name="author-summary" placeholder="e.g. I am ..."></textarea><br>
+        <textarea class="textarea" name="authorsummary" placeholder="e.g. I am ..."></textarea><br>
 
         <label class="label">Banner Picture</label>
         <input type="file" name="bannerimg">
@@ -98,13 +99,13 @@
         <input type="file" name="bgimg"><br><br>
 
         <label class="label">Paragraph 1</label>
-        <textarea class="textarea" name="paragraph-1"></textarea>
+        <textarea class="textarea" name="paragraph1"></textarea>
 
         <label class="label">Paragraph 2</label>
-        <textarea class="textarea" name="paragraph-2"></textarea>
+        <textarea class="textarea" name="paragraph2"></textarea>
 
         <label class="label">Paragraph 3</label>
-        <textarea class="textarea" name="paragraph-3"></textarea><br>
+        <textarea class="textarea" name="paragraph3"></textarea><br>
 
         <buttton class="button is-primary" type="submit" value="submit" name="submit">Submit</buttton>
     </form>
