@@ -12,12 +12,12 @@
     
     if(isset($_POST['submit'])){
         $Author = $_POST['author'];
-        $Summary = mysqli_real_escape_string($con, $_POST['authorsummary']);
-        $paragraph_1 = mysqli_real_escape_string($con, $_POST['paragraph1']);
-        $paragraph_2 = mysqli_real_escape_string($con, $_POST['paragraph2']);
-        $paragraph_3 = mysqli_real_escape_string($con, $_POST['paragraph3']);
+        $Summary = mysqli_real_escape_string($_POST['authorsummary']);
+        $Paragraph_1 = mysqli_real_escape_string($_POST['paragraph1']);
+        $Paragraph_2 = mysqli_real_escape_string($_POST['paragraph2']);
+        $Paragraph_3 = mysqli_real_escape_string($_POST['paragraph3']);
         
-        $query = "INSERT INTO journalwrite(Author, Summary, Paragraph_1, Paragraph_2, Paragraph_3) VALUES('$Author', '$Summary', '$paragraph_1', '$paragraph_2', '$paragraph_3')";
+        $query = "INSERT INTO journalwrite(Author, Summary, Paragraph_1, Paragraph_2, Paragraph_3) VALUES('$Author', '$Summary', '$Paragraph_1', '$Paragraph_2', '$Paragraph_3')";
 
         if(mysqli_query($db, $query)){
             echo "success";
