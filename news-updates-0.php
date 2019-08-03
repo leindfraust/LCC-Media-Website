@@ -25,7 +25,7 @@
 
         /* image of the article */
         .news-012 {
-            background: url(css/img/alegre-1.JPG) no-repeat center center;
+            background: url(css/img/news01/bgimg/news01bgimg.JPG) no-repeat center center;
             background-size: cover;
         }
 
@@ -77,23 +77,28 @@
 
     <section class="footer">
         <center>
-            <p class="subtitle">Made by <strong><a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/">LCC Info Media</a></strong></p>
+            <p class="subtitle">Made by <strong><a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/">LCC-Bais InfoMedia</a></strong></p>
         </center>
         <br>
         <center>
-            <a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/"><span><img src="css/img/fb.png" width="3%"></span></a>
-            <a href="#"><span><img src="css/img/insta.png" width="3%"></span></a>
-            <a href="#"><span><img src="css/img/twitter.png" width="3%"></span></a>
+            <a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/"><span><img src="css/img/medialogos/fb.png" width="3%"></span></a>
+            <a href="#"><span><img src="css/img/medialogos/insta.png" width="3%"></span></a>
+            <a href="#"><span><img src="css/img/medialogos/twitter.png" width="3%"></span></a>
+            <a href="infomedialcc@gmail.com"><span><img src="css/img/medialogos/gmail.png" width="3%"></span></a>
         </center>
     </section>
 
     <script src="scripts/functionjs.js"></script>
     <script src="scripts/vue.js"></script>
+    <script src="scripts/axios-master/dist/axios.min.js"></script>
     <script>
-        const app = new Vue ({
+        let app = new Vue ({
             el: '#paragraph',
             data: {
-                paragraphs: "hello boi"
+                paragraphs1: ""
+            },
+            methods: {
+                axios.get('scripts/news01ajax.php'), {}
             }
         })
     </script>

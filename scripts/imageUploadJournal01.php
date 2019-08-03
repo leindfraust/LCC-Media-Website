@@ -7,6 +7,7 @@
         $fileError = $_FILES['bgimg']['error'];
         $fileType = $_FILES['bgimg']['type'];
     
+        $newName = "news01bgimg.jpg";
         $fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
         
@@ -15,7 +16,7 @@
         if(in_array($fileActualExt, $allowed)) {
             if($fileError === 0) {
                 if($fileSize < 999999999) {
-                    $fileDestination = 'css/img/'.$fileName;
+                    $fileDestination = 'css/img/news01/bgimg/'.$newName;
                     move_uploaded_file($fileTmpName, $fileDestination);
                     header("Location: journal-page.php");
                 } else {
@@ -36,6 +37,7 @@
         $fileError = $_FILES['bannerimg']['error'];
         $fileType = $_FILES['bannerimg']['type'];
     
+        $newName = "news01img.jpg";
         $fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
         
@@ -44,7 +46,7 @@
         if(in_array($fileActualExt, $allowed)) {
             if($fileError === 0) {
                 if($fileSize < 999999999) {
-                    $fileDestination = 'css/img/news01/'.$fileName;
+                    $fileDestination = 'css/img/news01/banner/'.$newName;
                     move_uploaded_file($fileTmpName, $fileDestination);
                     header("Location: journal-page.php");
                 } else {
@@ -64,16 +66,16 @@
         $fileSize = $_FILES['authorimg']['size'];
         $fileError = $_FILES['authorimg']['error'];
         $fileType = $_FILES['authorimg']['type'];
-    
+
+        $newName = "news01author.jpg";
         $fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
         
         $allowed = array('jpg', 'jpeg', 'png');
-        
         if(in_array($fileActualExt, $allowed)) {
             if($fileError === 0) {
                 if($fileSize < 999999999) {
-                    $fileDestination = 'css/img/authors/'.$fileName;
+                    $fileDestination = 'css/img/authors/news01/'.$newName;
                     move_uploaded_file($fileTmpName, $fileDestination);
                     header("Location: journal-page.php");
                 } else {

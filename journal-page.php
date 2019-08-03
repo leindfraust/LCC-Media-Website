@@ -1,6 +1,6 @@
 <?php session_start();
  if(!isset($_SESSION['journalist'])){
-        header("Location:journalist-login.php");
+        header("Location:journalist-login01.php");
      }
           echo "Login Success";
 
@@ -15,14 +15,14 @@
         $Paragraph_2 = mysqli_real_escape_string($db, $_POST['paragraph2']);
         $Paragraph_3 = mysqli_real_escape_string($db, $_POST['paragraph3']);
         
-        $query = "INSERT INTO journalwrite(Author, Summary, Paragraph_1, Paragraph_2, Paragraph_3) VALUES('$Author', '$Summary', '$Paragraph_1', '$Paragraph_2', '$Paragraph_3')"; 
+        $query = "INSERT INTO news01(Author, Summary, Paragraph_1, Paragraph_2, Paragraph_3) VALUES('$Author', '$Summary', '$Paragraph_1', '$Paragraph_2', '$Paragraph_3')"; 
 
 
         if(mysqli_query($db, $query)) {
             echo "success";
         }
         
-        include "scripts/imageUploadJournal.php";
+        include "scripts/imageUploadJournal01.php";
     }
 ?>
 <!DOCTYPE html>
@@ -48,34 +48,35 @@
 </head>
 
 <body>
-    <h1 class="subtitle has-text-centered" style="color: red">NOTE: When uploading pictures, rename your file to your respected news area. <br>E.g. uploading file for banner picture: the name would be "news01img.jpg". We do not support png files.</h1>
-    <form method="post" action="journal-page.php" enctype="multipart/form-data">
+    <h1 class="subtitle has-text-centered" style="color: red">NOTE: We do not support png files.</h1>
+    
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
         <label class="label">Author's Name</label>
-        <input class="input" name="author" required><br>
+        <input class="input" name="author" ><br>
 
         <label class="label">Author's Picture</label>
-        <input type="file" name="authorimg" required><br>
+        <input type="file" name="authorimg" ><br>
         
         <label class="label">Summary</label>
-        <textarea class="textarea" name="authorsummary" placeholder="e.g. I am ..." required></textarea><br>
+        <textarea class="textarea" name="authorsummary" placeholder="e.g. I am ..." ></textarea><br>
 
         <label class="label">Banner Picture</label>
-        <input type="file" name="bannerimg" required>
+        <input type="file" name="bannerimg" >
         <label class="label">BG Picture</label>
-        <input type="file" name="bgimg" required><br><br>
+        <input type="file" name="bgimg" ><br><br>
 
         <label class="label">Paragraph 1</label>
         <textarea class="textarea" name="paragraph1"></textarea>
 
         <label class="label">Paragraph 2</label>
-        <textarea class="textarea" name="paragraph2" required></textarea>
+        <textarea class="textarea" name="paragraph2" ></textarea>
 
         <label class="label">Paragraph 3</label>
-        <textarea class="textarea" name="paragraph3" required></textarea><br>
+        <textarea class="textarea" name="paragraph3" ></textarea><br>
 
         <button type="submit" name="submit" value="Submit" class="button is-primary">Submit</button>
     </form>
-    <buttton class="button is-danger"><a href="scripts/logoutJournal.php">Logout</a></buttton>
+    <buttton class="button is-danger"><a href="scripts/logoutJournal01.php">Logout</a></buttton>
 </body>
 
 </html>

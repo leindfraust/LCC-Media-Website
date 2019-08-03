@@ -4,7 +4,7 @@ include 'scripts/config.php';
     
     $code = $_POST['code'];
     
-        $sql = "SELECT * FROM journalists WHERE Code='$code' ";
+        $sql = "SELECT * FROM news01journalist WHERE Code='$code' ";
         $result = mysqli_query($con,$sql);
         
         if(mysqli_num_rows($result)==1){
