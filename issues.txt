@@ -1,3 +1,0 @@
-known issues
-
-night mode doesn't entirely go with the customized font colors of titles in line 42 and 43
