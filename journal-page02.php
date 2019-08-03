@@ -1,8 +1,8 @@
 <?php session_start();
- if(!isset($_SESSION['journalist'])){
-        header("Location:journalist-login01.php");
+ if(!isset($_SESSION['journalist02'])){
+        header("Location:journalist-login02.php");
      }
-          echo "Hello, Journalist";
+          echo "Hello, Journalist 02";
 
     include "scripts/config.php";
 
@@ -16,14 +16,14 @@
         $Paragraph_3 = mysqli_real_escape_string($db, $_POST['paragraph3']);
         $Title = $_POST['title'];
         
-        $query = "INSERT INTO news01(Author,Title, Summary, Paragraph_1, Paragraph_2, Paragraph_3) VALUES('$Author','$Summary', '$Paragraph_1', '$Paragraph_2', '$Paragraph_3', '$Title')"; 
+        $query = "INSERT INTO news02(Author,Title, Summary, Paragraph_1, Paragraph_2, Paragraph_3) VALUES('$Author','$Summary', '$Paragraph_1', '$Paragraph_2', '$Paragraph_3', '$Title')"; 
 
 
         if(mysqli_query($db, $query)) {
             echo '<p style="color: green">Status: Form Submission successfully updated</p>';
         }
         
-        include "scripts/imageUploadJournal01.php";
+        include "scripts/imageUploadJournal02.php";
     }
 ?>
 <!DOCTYPE html>
@@ -80,7 +80,7 @@
 
         <button type="submit" name="submit" value="Submit" class="button is-primary">Submit</button>
     </form>
-    <buttton class="button is-danger"><a href="scripts/logoutJournal01.php">Logout</a></buttton>
+    <buttton class="button is-danger"><a href="scripts/logoutJournal02.php">Logout</a></buttton>
 </body>
 
 </html>

@@ -4,13 +4,13 @@ include 'scripts/config.php';
     
     $code = $_POST['code'];
     
-        $sql = "SELECT * FROM news01journalist WHERE Code='$code' ";
+        $sql = "SELECT * FROM news03journalist WHERE Code='$code' ";
         $result = mysqli_query($con,$sql);
         
         if(mysqli_num_rows($result)==1){
             session_start();
-            $_SESSION['journalist'] = 'true';
-            header('location:journal-page.php');
+            $_SESSION['journalist03'] = 'true';
+            header('location:journal-page03.php');
         } else {
             echo "wrong code";
         }
@@ -57,7 +57,7 @@ include 'scripts/config.php';
 <body>
     <center>
         <form method="post">
-            <h1 class="title has-text-centered">IMLCC-Bais <br>JOURNALIST'S PAGE 01</h1>
+            <h1 class="title has-text-centered">IMLCC-Bais <br>JOURNALIST'S PAGE 03</h1>
             <input type="text" class="input" placeholder="input code" name="code">
             <button type="submit" value="submit" class="button is-primary">ENTER</button>
         </form>

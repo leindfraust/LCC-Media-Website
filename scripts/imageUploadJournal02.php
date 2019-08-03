@@ -7,7 +7,7 @@
         $fileError = $_FILES['bgimg']['error'];
         $fileType = $_FILES['bgimg']['type'];
     
-        $newName = "news01bgimg.jpg";
+        $newName = "news02bgimg.jpg";
         $fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
         
@@ -16,7 +16,7 @@
         if(in_array($fileActualExt, $allowed)) {
             if($fileError === 0) {
                 if($fileSize < 999999999) {
-                    $fileDestination = 'css/img/news01/bgimg/'.$newName;
+                    $fileDestination = 'css/img/news02/bgimg/'.$newName;
                     move_uploaded_file($fileTmpName, $fileDestination);
                 } else {
                     echo "file too big";
@@ -36,7 +36,7 @@
         $fileError = $_FILES['bannerimg']['error'];
         $fileType = $_FILES['bannerimg']['type'];
     
-        $newName = "news01img.jpg";
+        $newName = "news02img.jpg";
         $fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
         
@@ -45,7 +45,7 @@
         if(in_array($fileActualExt, $allowed)) {
             if($fileError === 0) {
                 if($fileSize < 999999999) {
-                    $fileDestination = 'css/img/news01/banner/'.$newName;
+                    $fileDestination = 'css/img/news02/banner/'.$newName;
                     move_uploaded_file($fileTmpName, $fileDestination);
                 } else {
                     echo "file too big";
@@ -65,7 +65,7 @@
         $fileError = $_FILES['authorimg']['error'];
         $fileType = $_FILES['authorimg']['type'];
 
-        $newName = "news01author.jpg";
+        $newName = "news02author.jpg";
         $fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
         
@@ -73,7 +73,7 @@
         if(in_array($fileActualExt, $allowed)) {
             if($fileError === 0) {
                 if($fileSize < 999999999) {
-                    $fileDestination = 'css/img/authors/news01/'.$newName;
+                    $fileDestination = 'css/img/authors/news02/'.$newName;
                     move_uploaded_file($fileTmpName, $fileDestination);
                 } else {
                     echo "file too big";

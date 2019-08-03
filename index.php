@@ -1,3 +1,25 @@
+<?php
+header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
+<?php 
+    include 'scripts/config.php';
+?>
+<?php
+    $query = mysqli_query($con, "SELECT * FROM news01 ORDER BY ID DESC LIMIT 1");
+    $news_last = mysqli_fetch_row($query);
+?>
+<?php
+    $query02 = mysqli_query($con, "SELECT * FROM news02 ORDER BY ID DESC LIMIT 1");
+    $news_last02 = mysqli_fetch_row($query02);
+?>
+<?php
+    $query03 = mysqli_query($con, "SELECT * FROM news03 ORDER BY ID DESC LIMIT 1");
+    $news_last03 = mysqli_fetch_row($query03);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -110,15 +132,9 @@
     </div>
 
     <div id="news-updates" class="container">
-        <p class="title has-text-centered"> LATEST NEWS <span><img src="css/img/news-logo.png" width="7%"></span> </p>
-        <div class="columns inner">
-            <div class="column bg-nu">
-                <h1 class="title has-text-centered"> <i> LIT: A STAR IS BORN</i></h1>
-                <p class="subtitle has-text-centered">
-                    LCC YEAR-END CONCERT</p>
-                <br>
-                <p class="subtitle has-text-centered"> DECEMBER 20, 2018</p>
-            </div>
+        <p class="title has-text-centered"> LATEST NEWS <span><img src="css/img/news-logo.png" width="7%"></span> </p><br>
+        <div class="columns">
+            <p class="column subtitle has-text-centered">LIT: A Star is Born</p> 
             <div class="column" id="featuredbg">
             </div>
         </div>
@@ -127,15 +143,15 @@
                 <div class="columns">
                     <div class="column">
                         <a href="news-updates-0.php"><img src="css/img/news01/banner/news01img.jpg"></a>
-                        <p class="has-text-centered subtitle">Alegre 2018</p>
+                        <p class="has-text-centered subtitle"><?php echo ''.$news_last[6].''?></p>
                     </div>
                     <div class="column">
-                        <a href="news-updates-1.php"><img src="css/img/mugna-pr.jpg"></a>
-                        <p class="has-text-centered subtitle">MUGNA</p>
+                        <a href="news-updates-1.php"><img src="css/img/news02/banner/news02img.jpg"></a>
+                        <p class="has-text-centered subtitle"><?php echo ''.$news_last02[6].''?></p>
                     </div>
                     <div class="column">
-                        <a href="news-updates-2.php"><img src="css/img/nutrition-pr.jpg"></a>
-                        <p class="has-text-centered subtitle">Month of Nutrition</p>
+                        <a href="news-updates-2.php"><img src="css/img/news03/banner/news03img.jpg"></a>
+                        <p class="has-text-centered subtitle"><?php echo ''.$news_last03[6].''?></p>
                     </div>
                 </div>
             </div>
@@ -144,7 +160,7 @@
 
     <!-- main gallery -->
 
-    <h1 class="title has-text-centered" id="gallery">PHOTO GALLERY<span><img src="css/img/gallery-logo-1.png" width="7%"></span></h1>
+    <h1 class="title has-text-centered" id="gallery">PHOTO GALLERY<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
     <div class="container inner">
         <div>
             <br>
@@ -185,7 +201,7 @@
     <br>
     <button class="button galleryExtraButton"> See More</button>
     <br>
-    <!-- example -->
+    <!-- see more example -->
     <div class="container inner gallery-extra">
         <h1 class="subtitle has-text-centered"> <b>LCC Nutrition Month 2k18 </b></h1>
         <div class="owl-carousel owl-theme">

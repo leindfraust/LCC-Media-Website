@@ -1,7 +1,7 @@
 <?php
     include 'scripts/config.php';
 
-    $query = mysqli_query($con, "SELECT * FROM news01 ORDER BY ID DESC LIMIT 1");
+    $query = mysqli_query($con, "SELECT * FROM news02 ORDER BY ID DESC LIMIT 1");
     $news_last = mysqli_fetch_row($query);
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
 
         /* image of the article */
         .news-012 {
-            background: url(css/img/news01/bgimg/news01bgimg.JPG) no-repeat center center;
+            background: url(css/img/news02/bgimg/news02bgimg.JPG) no-repeat center center;
             background-size: cover;
         }
 
@@ -66,7 +66,7 @@
     <br>
     <div class="container">
         <div class="columns">
-            <div class="column is-3"><img src="css/img/authors/news01/news01author.jpg">
+            <div class="column is-3"><img src="css/img/authors/news02/news02author.jpg">
                 <!-- here change the name of the author -->
                 <p style="font-size: 15px;" class="subtitle">Author: <?php echo ''.$news_last[1].''; ?></p>
             </div>

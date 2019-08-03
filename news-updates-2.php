@@ -1,3 +1,9 @@
+<?php
+    include 'scripts/config.php';
+
+    $query = mysqli_query($con, "SELECT * FROM news03 ORDER BY ID DESC LIMIT 1");
+    $news_last = mysqli_fetch_row($query);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -11,7 +17,7 @@
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css.map">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?=v.1223">
+    <link rel="stylesheet" type="text/css" href="css/style.css?=v.2123">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -23,8 +29,9 @@
             color: white;
         }
 
+        /* image of the article */
         .news-012 {
-            background: url(css/img/mugna.jpg) no-repeat center center;
+            background: url(css/img/news03/bgimg/news03bgimg.JPG) no-repeat center center;
             background-size: cover;
         }
 
@@ -41,30 +48,38 @@
     <div class="hero is-medium news-012">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title"> MUGNA 2018</h1>
+                <!-- the title of the article -->
+                <h1 class="title"> <?php echo ''.$news_last[6].''?> </h1>
                 <a class="night-mode" onclick="nightMode()"> Night Mode </a>
             </div>
         </div>
     </div>
     <br>
+    <!-- the body of the article-->
     <div class="container para-news"><br>
-        <p class="subtitle has-text-centered">MUGNA is an art and craft contest held at Bais City Multipurpose on the midst of upcoming annual feast celebration of their beloved city. Different schools from the city presents their talented students to compete for the exhibit. Arts and craft contest that magnifies the different spots could be visited at Bais City. A way of promoting their city through arts and designs. Miniatures out of paper and cards and such displays being exhibited. The competition gradually went well with the full participation of each contestants. One great way in promoting both city and talents through arts. La Consolacion College representatives got the winning place for their signature Bais spots miniatures --- aims to promote tourism bringing the quote “It’s yours to discover Bais</p><br><br>
+        <p class="subtitle has-text-centered"><?php echo ''.$news_last[3].''; ?>
+        <br><br><?php echo ''.$news_last[4].''; ?>
+        <br><br><?php echo ''.$news_last[5].''; ?>
+        </p><br>
     </div>
 
+    <br>
     <div class="container">
         <div class="columns">
-            <div class="column is-3"><img src="css/img/authors/sheryl.jpg">
-                <p style="font-size: 15px;" class="subtitle">Author: Ma. Sheryl Balatong</p>
+            <div class="column is-3"><img src="css/img/authors/news03/news03author.jpg">
+                <!-- here change the name of the author -->
+                <p style="font-size: 15px;" class="subtitle">Author: <?php echo ''.$news_last[1].''; ?></p>
             </div>
+            <!-- the intro of the author -->
             <div class="column is-4">
                 <div id="author" style="margin-top: 25%; position: relative;">
-                    <p style="font-size: 15px;" class="subtitle"> I am Ma. Sheryl P. Balatong, 17 years old, a grade 12 HUMSS student. I am the president of Visual Arts Club(Guhit LCCian), a writer, artist and a campus journalist. </p>
+                    <p style="font-size: 15px;" class="subtitle"> <?php echo ''.$news_last[2].''; ?></p>
                 </div>
             </div>
         </div>
     </div>
-
     <br>
+
     <section class="footer">
         <center>
             <p class="subtitle">Made by <strong><a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/">LCC-Bais InfoMedia</a></strong></p>
@@ -77,7 +92,7 @@
             <a href="infomedialcc@gmail.com"><span><img src="css/img/medialogos/gmail.png" width="3%"></span></a>
         </center>
     </section>
-
+    
     <script src="scripts/functionjs.js"></script>
 </body>
 
