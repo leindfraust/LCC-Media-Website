@@ -1,3 +1,9 @@
+<?php
+    include 'scripts/config.php';
+
+    $query = mysqli_query($con, "SELECT * FROM news01 ORDER BY ID DESC LIMIT 1");
+    $news_last = mysqli_fetch_row($query);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -50,11 +56,10 @@
     </div>
     <br>
     <!-- the body of the article-->
-    <div id="paragraph" class="container para-news"><br>
-        <p class="subtitle has-text-centered">{{paragraphs}}
-        <br><br>“Alegre” was this year’s theme for the Acquaintance Party 2018. Alegre means to be happy, glad, and cheerful. It was indeed filled with happiness since everyone were given the chance to thank the people who gave them happiness. The freshmen were very much eager to meet and bond with their seniors for it was the perfect time to gather, interact, bond, and share memories that would probably last a lifetime.
-            The whole institution of LCC was filled with euphoric and energetic souls. The LCC community doesn’t seem shaken as raindrops showered through the splendid night and tried to cause impairment to every students perfect party get up. Almost everyone striked a pose and uploaded photos with equally artistic captions. Some students are given the chance to take a photo with their crushes and some are contented in posing with their lavish OOTD’s.
-        <br><br>The most used hashtags are #YOU are my Alegre, #Alegre2018 and #TheLCCAcquaintanceParty. Indeed, this year’s acquaintance party just proved everyone that it’s more fun in LCC and that LCCians are fun to be with.
+    <div class="container para-news"><br>
+        <p class="subtitle has-text-centered"><?php echo ''.$news_last[3].''; ?>
+        <br><br><?php echo ''.$news_last[4].''; ?>
+        <br><br><?php echo ''.$news_last[5].''; ?>
         </p><br>
     </div>
 
@@ -63,12 +68,12 @@
         <div class="columns">
             <div class="column is-3"><img src="css/img/authors/jelli.jpg">
                 <!-- here change the name of the author -->
-                <p style="font-size: 15px;" class="subtitle">Author: Jelli Rose Bajardo</p>
+                <p style="font-size: 15px;" class="subtitle">Author: <?php echo ''.$news_last[1].''; ?></p>
             </div>
             <!-- the intro of the author -->
             <div class="column is-4">
                 <div id="author" style="margin-top: 25%; position: relative;">
-                    <p style="font-size: 15px;" class="subtitle"> I am Jelli Rose Bajardo, 16 years old, a grade 12 ABM Student. I am the Public Information Officer of the Student Government and the President of MRB-CMRC volunteer. I am a writer and a campus jouranlist. </p>
+                    <p style="font-size: 15px;" class="subtitle"> <?php echo ''.$news_last[2].''; ?></p>
                 </div>
             </div>
         </div>
@@ -87,21 +92,6 @@
             <a href="infomedialcc@gmail.com"><span><img src="css/img/medialogos/gmail.png" width="3%"></span></a>
         </center>
     </section>
-
-    <script src="scripts/functionjs.js"></script>
-    <script src="scripts/vue.js"></script>
-    <script src="scripts/axios-master/dist/axios.min.js"></script>
-    <script>
-        let app = new Vue ({
-            el: '#paragraph',
-            data: {
-                paragraphs1: ""
-            },
-            methods: {
-                axios.get('scripts/news01ajax.php'), {}
-            }
-        })
-    </script>
 </body>
 
 </html>
