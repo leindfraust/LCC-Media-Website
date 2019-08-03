@@ -1,9 +1,11 @@
 <?php
-header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
-header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
+function clearBrowserCache() {
+    header("Pragma: no-cache");
+    header("Cache: no-cache");
+    header("Cache-Control: no-cache, must-revalidate");
+    header("Expires: Mon, 9 Jul 1995 05:00:00 GMT");
+}
+clearBrowserCache();
 ?>
 <?php 
     include 'scripts/config.php';
@@ -19,6 +21,10 @@ header("Pragma: no-cache");
 <?php
     $query03 = mysqli_query($con, "SELECT * FROM news03 ORDER BY ID DESC LIMIT 1");
     $news_last03 = mysqli_fetch_row($query03);
+?>
+<?php
+    $query04 = mysqli_query($con, "SELECT * FROM featuredevent ORDER BY ID DESC LIMIT 1");
+    $featured = mysqli_fetch_row($query04);
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,7 +67,7 @@ header("Pragma: no-cache");
                     <h2 class="has-text-white"> News and Updates </h2>
                 </a>
                 <a class="navbar-item" href="#gallery">
-                    <h2 class="has-text-white"> Photo Gallery </h2>
+                    <h2 class="has-text-white"> Featured Photos</h2>
                 </a>
                 <a class="navbar-item" href="#features">
                     <h2 class="has-text-white"> Merchandise </h2>
@@ -134,7 +140,7 @@ header("Pragma: no-cache");
     <div id="news-updates" class="container">
         <p class="title has-text-centered"> LATEST NEWS <span><img src="css/img/news-logo.png" width="7%"></span> </p><br>
         <div class="columns">
-            <p class="column subtitle has-text-centered">LIT: A Star is Born</p>
+            <p class="column subtitle has-text-centered"><b><?php echo ''.$featured[1].''?></b><br><br><?php echo ''.$featured[2].''?></p>
             <div class="column" id="featuredbg">
             </div>
         </div>
@@ -182,9 +188,9 @@ header("Pragma: no-cache");
     <div id="features">
         <div class="container">
             <div class="inner">
-                <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/merch-logo.png" width="7%"></span></h1>
-                <br>
-                <button class="button is-medium" onclick="window.location.href='requestForm.php'">
+                <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1>
+                <br><p class="subtitle has-text-centered">coming soon...</p><br><br>
+                <!--<button class="button is-medium" onclick="window.location.href='requestForm.php'">
                     ORDER NOW </button><br>
                 <div class="columns">
                     <div class="column">
@@ -218,7 +224,7 @@ header("Pragma: no-cache");
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>

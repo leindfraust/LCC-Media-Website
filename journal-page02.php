@@ -49,7 +49,7 @@
 </head>
 
 <body>
-    <h1 class="subtitle has-text-centered" style="color: red">NOTE: We do not support png files.<br> Please use landscape images for Background Picture.</h1>
+    <h1 class="subtitle has-text-centered" style="color: red">NOTE: We do not support png files.Only use JPG files.<br> Please use landscape images for Background Picture.</h1>
     
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
         <label class="label">Author's Name</label>

@@ -10,7 +10,7 @@ include 'scripts/config.php';
         if(mysqli_num_rows($result)==1){
             session_start();
             $_SESSION['admin'] = 'true';
-            header('location:data-display.php');
+            header('location:featured.php');
         } else {
             echo "wrong code";
         }
@@ -57,12 +57,10 @@ include 'scripts/config.php';
 <body>
     <center>
         <form method="post">
-            <h1 class="title has-text-centered">IMLCC-Bais <br>ADMIN PAGE</h1>
+            <h1 class="title has-text-centered">IMLCC-Bais <br>ADMIN FEATURED PAGE</h1>
             <input type="text" class="input" placeholder="input code" name="code">
             <button type="submit" value="submit" class="button is-primary">ENTER</button>
-        </form><br><br>
-        <button class="button is-info"><a href="featuredlogin.php" style="color: white">EDIT FEATURED CONTENT</a></button>
-        <button class="button is-info"><a href="carousellogin.php" style="color: white">EDIT FEATURED PHOTOS</a></button>
+        </form>
     </center>
 </body>
 
