@@ -66,7 +66,7 @@
     <br>
     <div class="container">
         <div class="columns">
-            <div class="column is-3"><img src="css/img/authors/jelli.jpg">
+            <div class="column is-3"><img src="css/img/authors/news01/news01author.jpg">
                 <!-- here change the name of the author -->
                 <p style="font-size: 15px;" class="subtitle">Author: <?php echo ''.$news_last[1].''; ?></p>
             </div>
@@ -92,6 +92,8 @@
             <a href="infomedialcc@gmail.com"><span><img src="css/img/medialogos/gmail.png" width="3%"></span></a>
         </center>
     </section>
+    
+    <script src="scripts/functionjs.js"></script>
 </body>
 
 </html>

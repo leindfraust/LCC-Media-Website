@@ -19,7 +19,7 @@
 
 
         if(mysqli_query($db, $query)) {
-            echo "success";
+            echo '<p style="color: pink;">Submission success</p>';
         }
         
         include "scripts/imageUploadJournal01.php";
@@ -52,27 +52,27 @@
     
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
         <label class="label">Author's Name</label>
-        <input class="input" name="author" ><br>
+        <input class="input" name="author" required><br>
 
         <label class="label">Author's Picture</label>
-        <input type="file" name="authorimg" ><br>
+        <input type="file" name="authorimg" required><br>
         
         <label class="label">Summary</label>
-        <textarea class="textarea" name="authorsummary" placeholder="e.g. I am ..." ></textarea><br>
+        <textarea class="textarea" name="authorsummary" placeholder="e.g. I am ..." required></textarea><br>
 
         <label class="label">Banner Picture</label>
         <input type="file" name="bannerimg" >
         <label class="label">BG Picture</label>
-        <input type="file" name="bgimg" ><br><br>
+        <input type="file" name="bgimg" required><br><br>
 
         <label class="label">Paragraph 1</label>
-        <textarea class="textarea" name="paragraph1"></textarea>
+        <textarea class="textarea" name="paragraph1" required></textarea>
 
         <label class="label">Paragraph 2</label>
-        <textarea class="textarea" name="paragraph2" ></textarea>
+        <textarea class="textarea" name="paragraph2" required></textarea>
 
         <label class="label">Paragraph 3</label>
-        <textarea class="textarea" name="paragraph3" ></textarea><br>
+        <textarea class="textarea" name="paragraph3" required></textarea><br>
 
         <button type="submit" name="submit" value="Submit" class="button is-primary">Submit</button>
     </form>
