@@ -28,7 +28,7 @@ header("Pragma: no-cache");
     <meta charset="utf-8">
     <meta name="keywords" content="LCC, LCC INFO MEDIA, LCC MEDIA, La Consolacion College, LCC-Bais, Bais College">
     <meta name="description" content="LCC- INFO MEDIA, the media to all LCCians">
-    <link rel="shortcut icon" type="image/png" href="css/img/lcclogo.png">
+    <link rel="shortcut icon" type="image/png" href="css/img/lcclogos/lcclogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css.map">
@@ -134,7 +134,7 @@ header("Pragma: no-cache");
     <div id="news-updates" class="container">
         <p class="title has-text-centered"> LATEST NEWS <span><img src="css/img/news-logo.png" width="7%"></span> </p><br>
         <div class="columns">
-            <p class="column subtitle has-text-centered">LIT: A Star is Born</p> 
+            <p class="column subtitle has-text-centered">LIT: A Star is Born</p>
             <div class="column" id="featuredbg">
             </div>
         </div>
@@ -160,68 +160,25 @@ header("Pragma: no-cache");
 
     <!-- main gallery -->
 
-    <h1 class="title has-text-centered" id="gallery">PHOTO GALLERY<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
+    <h1 class="title has-text-centered" id="gallery">FEATURED PHOTOS<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
     <div class="container inner">
         <div>
             <br>
-            <h1 class="subtitle has-text-centered"> <b>LCC Intramurals 2k18</b></h1>
             <div class="owl-carousel owl-theme">
-                <div class="item"><img src="css/img/intramurals/cardinals.jpg"></div>
-                <div class="item"><img src="css/img/intramurals/business.jpg"></div>
-                <div class="item"><img src="css/img/intramurals/gas.jpg"></div>
-                <div class="item"><img src="css/img/intramurals/paradox.jpg"></div>
+                <div class="item"><img src="css/img/carousel/1.jpg"></div>
+                <div class="item"><img src="css/img/carousel/2.jpg"></div>
+                <div class="item"><img src="css/img/carousel/3.jpg"></div>
+                <div class="item"><img src="css/img/carousel/4.jpg"></div>
             </div>
             <div class="owl-carousel owl-theme">
-                <div class="item"><img src="css/img/intramurals/royals.jpg"></div>
-                <div class="item"><img src="css/img/intramurals/skippen.jpg"></div>
-                <div class="item"><img src="css/img/intramurals/wizards.jpg"></div>
-                <div class="item"><img src="css/img/intramurals/spartan.jpg"></div>
+                <div class="item"><img src="css/img/carousel/5.jpg"></div>
+                <div class="item"><img src="css/img/carousel/6.jpg"></div>
+                <div class="item"><img src="css/img/carousel/7.jpg"></div>
+                <div class="item"><img src="css/img/carousel/8.jpg"></div>
             </div>
         </div>
     </div>
     <br>
-    <div class="container inner">
-        <h1 class="subtitle has-text-centered"> <b>LCC Nutrition Month 2k18 </b></h1>
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img src="css/img/nutrition/1.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/2.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/3.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/4.jpg"></div>
-        </div>
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img src="css/img/nutrition/5.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/6.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/7.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/8.jpg"></div>
-        </div>
-    </div>
-
-    <!-- end main gallery -->
-
-    <br>
-    <button class="button galleryExtraButton"> See More</button>
-    <br>
-    <!-- see more example -->
-    <div class="container inner gallery-extra">
-        <h1 class="subtitle has-text-centered"> <b>LCC Nutrition Month 2k18 </b></h1>
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img src="css/img/nutrition/1.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/2.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/3.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/4.jpg"></div>
-        </div>
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img src="css/img/nutrition/5.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/6.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/7.jpg"></div>
-            <div class="item"><img src="css/img/nutrition/8.jpg"></div>
-        </div>
-    </div>
-    <br>
-
-    <button class="button galleryExtraButtonTwo">See Less</button>
-
-    <!-- end -->
     <div id="features">
         <div class="container">
             <div class="inner">
@@ -340,6 +297,7 @@ header("Pragma: no-cache");
                 $('.galleryExtraButtonTwo').hide();
             });
         });
+
     </script>
 </body>
 
