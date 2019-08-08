@@ -64,7 +64,7 @@ clearBrowserCache();
                     <h2 class="has-text-white"> Home </h2>
                 </a>
                 <a class="navbar-item" href="#news-updates">
-                    <h2 class="has-text-white"> News and Updates </h2>
+                    <h2 class="has-text-white"> News and Events </h2>
                 </a>
                 <a class="navbar-item" href="#gallery">
                     <h2 class="has-text-white"> Featured Photos</h2>
@@ -88,13 +88,13 @@ clearBrowserCache();
         <div id="nav-burger" class="overlay">
             <a class="closebtn" onclick="closeNav()">&times;</a>
             <a id="night-mode" class="night-mode" onclick="nightMode()">Night Mode</a>
-            <button class="modal-button button is-warning" data-target=".modal" onclick="closeNav()">
+            <!-- modal<button class="modal-button button is-warning" data-target=".modal" onclick="closeNav()">
                 <p>Faculty member of the month!</p>
-            </button>
+            </button>-->
             <div class="overlay-content">
                 <p class="subtitle"><a onclick="closeNav()" href="#home">Home</a></p>
-                <p class="subtitle"><a onclick="closeNav()" href="#news-updates">News and Updates</a></p>
-                <p class="subtitle"><a onclick="closeNav()" href="#gallery">Photo Gallery</a></p>
+                <p class="subtitle"><a onclick="closeNav()" href="#news-updates">News and Events</a></p>
+                <p class="subtitle"><a onclick="closeNav()" href="#gallery">Featured Photos</a></p>
                 <p class="subtitle"><a onclick="closeNav()" href="#features">Merchandise</a></p>
             </div>
         </div>
