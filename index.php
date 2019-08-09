@@ -138,7 +138,7 @@ clearBrowserCache();
     </div>
 
     <div id="news-updates" class="container">
-        <p class="title has-text-centered"> LATEST NEWS <span><img src="css/img/news-logo.png" width="7%"></span> </p><br>
+        <p class="title has-text-centered"> LATEST NEWS <span><img src="css/img/meidalogos/news-logo.png" width="7%"></span> </p><br>
         <div class="columns">
             <p class="column subtitle has-text-centered"><b><?php echo ''.$featured[1].''?></b><br><br><?php echo ''.$featured[2].''?></p>
             <div class="column" id="featuredbg">
