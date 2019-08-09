@@ -267,13 +267,6 @@ nav {
     border-radius: 15px;
 }
 
-.label,
-.help,
-.control {
-    position: relative;
-    right: -25%;
-}
-
 input {
     padding: 10px;
     width: 300px;
