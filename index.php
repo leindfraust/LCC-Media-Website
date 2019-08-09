@@ -188,43 +188,12 @@ clearBrowserCache();
     <div id="features">
         <div class="container">
             <div class="inner">
-                <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1>
-                <br><p class="subtitle has-text-centered">coming soon...</p><br><br>
-                <!--<button class="button is-medium" onclick="window.location.href='requestForm.php'">
+                <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1><br><br>
+                <center>
+                    <img src="css/img/merchandise/shirt01.jpg" width="50%" height="50%">
+                </center>
+                <button class="button is-medium" onclick="window.location.href='requestForm.php'">
                     ORDER NOW </button><br>
-                <div class="columns">
-                    <div class="column">
-                        <p class="subtitle has-text-centered" style="font-size: 30px !important">NEW RELEASE</p>
-                        <img src="css/img/LITShirt.jpg">
-                        <div class="subtitle has-text-centered">
-                            <p>LIT: A Star is Born / 210PHP <b><i>out of stock</i></b></p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="columns is-mobile">
-                            <div class="column">
-                                <img src="css/img/shirt-tribu.jpg">
-                                <div class="subtitle has-text-centered">
-                                    <p>TRIBU LCCIAN SINULOG / 230PHP <b><i>out of stock</i></b></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="columns is-mobile">
-                            <div class="column">
-                                <img src="css/img/shirt-halu.jpg">
-                                <div class="subtitle has-text-centered">
-                                    <p>HALU / 230PHP <b><i>out of stock</i></b></p>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <img src="css/img/shirt-intramurals.jpg">
-                                <div class="subtitle has-text-centered">
-                                    <p>LCC Intramurals / 230PHP <b><i>out of stock</i></b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
             </div>
         </div>
     </div>
