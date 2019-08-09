@@ -38,14 +38,14 @@ $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?=v.11243">
+    <link rel="stylesheet" type="text/css" href="css/style.css?=v.11233">
     <link rel="stylesheet" href="css/customButton.css">
 </head>
 
 <body><br><br>
     <h1 class="subtitle has-text-centered"> ORDER FORM </h1>
     <div class="columns" style="padding: 50px">
-        <div class="column">
+        <div class="column is-7">
             <img src="css/img/merchandise/shirt01.jpg">
         </div>
         <div class="column">
