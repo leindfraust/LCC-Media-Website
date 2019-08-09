@@ -188,7 +188,7 @@ clearBrowserCache();
     <div id="features">
         <div class="container">
             <div class="inner">
-                <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1><br><br>
+                <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1><br>
                 <center>
                     <img src="css/img/merchandise/shirt01.jpg" width="50%" height="50%">
                 </center>
