@@ -172,6 +172,10 @@ nav {
     .title > span > img {
         width: 12% !important;
     }
+    #features > div > div > center > img {
+        width: 100% !important;
+        height: 100% !important;
+    }
 }
 
 #features {
