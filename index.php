@@ -189,11 +189,11 @@ clearBrowserCache();
         <div class="container">
             <div class="inner">
                 <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1><br><br>
-                <button class="button is-medium" onclick="window.location.href='requestForm.php'">
-                    ORDER NOW </button><br>
                 <center>
                     <img src="css/img/merchandise/shirt01.jpg" width="50%" height="50%">
                 </center>
+                <button class="button is-medium" onclick="window.location.href='requestForm.php'">
+                    ORDER NOW </button><br>
             </div>
         </div>
     </div>
