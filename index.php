@@ -192,7 +192,7 @@ clearBrowserCache();
                 <button class="button is-medium" onclick="window.location.href='requestForm.php'">
                     ORDER NOW </button><br>
                 <center>
-                        <img src="css/img/merchandise/shirt01.jpg" width="50%" height="50%">
+                    <img src="css/img/merchandise/shirt01.jpg" width="50%" height="50%">
                 </center>
             </div>
         </div>
