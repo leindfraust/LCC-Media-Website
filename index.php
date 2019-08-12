@@ -190,7 +190,7 @@ clearBrowserCache();
             <div class="inner">
                 <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1><br>
                 <center>
-                    <img src="css/img/merchandise/shirt01.jpg" width="50%" height="50%">
+                    <img id="img-shirt" src="css/img/merchandise/shirt01.jpg" width="50%" height="50%">
                 </center>
                 <button class="button is-medium" onclick="window.location.href='requestForm.php'">
                     ORDER NOW </button><br>
@@ -250,26 +250,6 @@ clearBrowserCache();
             });
             $('.modal-close').click(function() {
                 $('.modal').removeClass("is-active");
-            });
-        });
-
-    </script>
-    <script>
-        $(document).ready(function() {
-
-            $('.gallery-extra').hide();
-            $('.galleryExtraButtonTwo').hide();
-
-            $('.galleryExtraButton').click(function() {
-                $('.gallery-extra').fadeIn();
-                $('.galleryExtraButton').hide();
-                $('.galleryExtraButtonTwo').show();
-            });
-
-            $('.galleryExtraButtonTwo').click(function() {
-                $('.gallery-extra').fadeOut();
-                $('.galleryExtraButton').show();
-                $('.galleryExtraButtonTwo').hide();
             });
         });
 
