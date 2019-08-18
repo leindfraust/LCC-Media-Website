@@ -41,16 +41,6 @@ include 'scripts/config.php';
                 padding: 5 !important;
             }
         }
-        h1 {
-            background-color: blanchedalmond;
-            border-radius: 15px;
-            width: 20%;
-            padding: 35px
-        }
-        html {
-            background: url(css/img/experiencelcc.jpg)no-repeat center center;
-            background-size: cover;
-        }
     </style>
 </head>
 
