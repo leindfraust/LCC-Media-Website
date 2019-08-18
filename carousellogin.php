@@ -41,6 +41,7 @@ include 'scripts/config.php';
                 padding: 5 !important;
             }
         }
+        </style>
 </head>
 
 <body>
