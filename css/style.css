@@ -110,9 +110,10 @@ nav {
 }
 
 @media only screen and (max-width: 1000px) {
-    .hero-body > #landing-page > h1 > span > img{
+    .hero-body > #landing-page > h1 > span > img {
         width: 27% !important;
     }
+
     #features {
         height: auto !important;
     }
