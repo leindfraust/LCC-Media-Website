@@ -39,7 +39,7 @@ clearBrowserCache();
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css.map">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?=v.2.1">
+    <link rel="stylesheet" type="text/css" href="css/style.css?=v.2.5">
     <script src="scripts/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
@@ -107,7 +107,7 @@ clearBrowserCache();
         <div class="hero is-fullheight">
             <div class="hero-body">
                 <div class="container" id="landing-page">
-                    <h1 style="font-size: `150px; color: white !important;" class="title" id="arrayExceptTitle"> LCC-Bais InfoMedia <span><img src="css/img/lcclogos/lcclogo.png" width="10%"></span></h1>
+                    <h1 style="color: white !important;" class="title" id="arrayExceptTitle"> LCC-Bais InfoMedia <span><img src="css/img/lcclogos/lcclogo.png" width="10%"></span></h1>
                     <p style="color:    #f79c1d;" class="subtitle" id="arrayExceptSubtitle"><i> the media to all LCCians-Bais</i> </p>
                     <div id="img-logo">
                         <span><img src="css/img/lcclogos/visual.png" width="5%"></span>
@@ -138,7 +138,7 @@ clearBrowserCache();
     </div>
 
     <div id="news-updates" class="container">
-        <p class="title has-text-centered"> LATEST NEWS <span><img src="css/img/meidalogos/news-logo.png" width="7%"></span> </p><br>
+        <p class="title has-text-centered"> LATEST NEWS <span><img src="css/img/medialogos/news-logo.png" width="7%"></span> </p><br>
         <div class="columns">
             <p class="column subtitle has-text-centered"><b><?php echo ''.$featured[1].''?></b><br><br><?php echo ''.$featured[2].''?></p>
             <div class="column" id="featuredbg">
@@ -163,8 +163,6 @@ clearBrowserCache();
             </div>
         </div>
     </div>
-
-    <!-- main gallery -->
 
     <h1 class="title has-text-centered" id="gallery">FEATURED PHOTOS<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
     <div class="container inner">
