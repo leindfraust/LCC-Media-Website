@@ -39,7 +39,7 @@ clearBrowserCache();
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css.map">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?=v.2.5">
+    <link rel="stylesheet" type="text/css" href="css/style.css?=v.2.88">
     <script src="scripts/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
@@ -108,7 +108,7 @@ clearBrowserCache();
             <div class="hero-body">
                 <div class="container" id="landing-page">
                     <h1 style="color: white !important;" class="title" id="arrayExceptTitle"> LCC-Bais InfoMedia <span><img src="css/img/lcclogos/lcclogo.png" width="10%"></span></h1>
-                    <p style="color:    #f79c1d;" class="subtitle" id="arrayExceptSubtitle"><i> the media to all LCCians-Bais</i> </p>
+                    <p style="color:    skyblue;" class="subtitle" id="arrayExceptSubtitle"><i> the media to all LCCians-Bais</i> </p>
                     <div id="img-logo">
                         <span><img src="css/img/lcclogos/visual.png" width="5%"></span>
                         <span><img src="css/img/lcclogos/IMLogoW.png" width="5%"></span>
@@ -135,15 +135,15 @@ clearBrowserCache();
                 </div>
             </div>
         </div>
-    </div>
+    </div><br>
 
-    <div id="news-updates" class="container inner"><br>
+    <div id="news-updates" class="container innerNewsUpdate"><br>
         <p class="title has-text-centered"> News and Events <span><img src="css/img/medialogos/news-logo.png" width="7%"></span> </p><br>
         <div class="columns">
             <p class="column subtitle has-text-centered"><b><?php echo ''.$featured[1].''?></b><br><br><?php echo ''.$featured[2].''?></p>
             <div class="column" id="featuredbg">
             </div>
-        </div>
+        </div><br>
         <div class="container">
             <div class="inner">
                 <div class="columns">
@@ -201,7 +201,7 @@ clearBrowserCache();
         </center>
     </section>
 
-    <script src="scripts/functionjs.js?v.1.2">
+    <script src="scripts/functionjs.js?v.1.5">
     </script>
     <script src="scripts/anchorlink.js">
     </script>

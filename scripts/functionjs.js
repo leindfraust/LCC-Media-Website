@@ -30,6 +30,8 @@ function nightMode() {
 
     let nightInner = document.getElementsByClassName("inner");
 
+    let nightInnerNewsUpdate = document.getElementsByClassName("innerNewsUpdate");
+    
     let nightFooter = document.getElementsByClassName("footer");
 
     let nightTextTitle = document.querySelectorAll(".title:not(#arrayExceptTitle)");
@@ -90,6 +92,16 @@ function nightMode() {
         } else {
             nightInner[i].style.backgroundColor = "";
             nightInner[i].style.borderStyle = "solid";
+        }
+    }
+    
+    for (let i = 0; i < nightInnerNewsUpdate.length; i++) {
+        if (nightInnerNewsUpdate[i].style.backgroundColor === "") {
+            nightInnerNewsUpdate[i].style.backgroundColor = "#243447";
+            nightInnerNewsUpdate[i].style.borderStyle = "hidden";
+        } else {
+            nightInnerNewsUpdate[i].style.backgroundColor = "";
+            nightInnerNewsUpdate[i].style.borderStyle = "solid";
         }
     }
 }

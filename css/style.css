@@ -239,6 +239,12 @@ nav {
     border-radius: 12px;
 }
 
+.innerNewsUpdate {
+    border: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
 #news-updates > .container > .inner > .columns > .column > a > img:hover {
     border: 2px solid transparent;
 }
