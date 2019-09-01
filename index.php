@@ -183,11 +183,11 @@ clearBrowserCache();
         </div>
         <div class="column">
             <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1>
-                <img id="img-shirt" src="css/img/merchandise/shirt01.jpg" width="98%">
+            <img id="img-shirt" src="css/img/merchandise/shirt01.jpg" width="98%">
             <button class="button is-medium" onclick="window.location.href='requestForm.php'">
                 ORDER NOW </button><br>
         </div>
-    </div>
+    </div><br>
     <section class="footer">
         <center>
             <p class="subtitle">Made by <strong><a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/">LCC-Bais InfoMedia</a></strong></p>
