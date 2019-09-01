@@ -137,8 +137,8 @@ clearBrowserCache();
         </div>
     </div>
 
-    <div id="news-updates" class="container">
-        <p class="title has-text-centered"> LATEST NEWS <span><img src="css/img/medialogos/news-logo.png" width="7%"></span> </p><br>
+    <div id="news-updates" class="container inner"><br>
+        <p class="title has-text-centered"> News and Events <span><img src="css/img/medialogos/news-logo.png" width="7%"></span> </p><br>
         <div class="columns">
             <p class="column subtitle has-text-centered"><b><?php echo ''.$featured[1].''?></b><br><br><?php echo ''.$featured[2].''?></p>
             <div class="column" id="featuredbg">
@@ -164,38 +164,30 @@ clearBrowserCache();
         </div>
     </div>
 
-    <h1 class="title has-text-centered" id="gallery">FEATURED PHOTOS<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
-    <div class="container inner">
-        <div>
-            <br>
-            <div class="owl-carousel owl-theme">
-                <div class="item"><img src="css/img/carousel/1.jpg"></div>
-                <div class="item"><img src="css/img/carousel/2.jpg"></div>
-                <div class="item"><img src="css/img/carousel/3.jpg"></div>
-                <div class="item"><img src="css/img/carousel/4.jpg"></div>
-            </div>
-            <div class="owl-carousel owl-theme">
-                <div class="item"><img src="css/img/carousel/5.jpg"></div>
-                <div class="item"><img src="css/img/carousel/6.jpg"></div>
-                <div class="item"><img src="css/img/carousel/7.jpg"></div>
-                <div class="item"><img src="css/img/carousel/8.jpg"></div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div id="features">
-        <div class="container">
-            <div class="inner">
-                <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1><br>
-                <center>
-                    <img id="img-shirt" src="css/img/merchandise/shirt01.jpg" width="50%" height="50%">
-                </center>
-                <button class="button is-medium" onclick="window.location.href='requestForm.php'">
-                    ORDER NOW </button><br>
+    <div class="columns inner">
+        <div class="column inner">
+            <h1 class="title has-text-centered" id="gallery">FEATURED PHOTOS<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
+            <div>
+                <br>
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="css/img/carousel/1.jpg"></div>
+                    <div class="item"><img src="css/img/carousel/2.jpg"></div>
+                    <div class="item"><img src="css/img/carousel/3.jpg"></div>
+                    <div class="item"><img src="css/img/carousel/4.jpg"></div>
+                    <div class="item"><img src="css/img/carousel/5.jpg"></div>
+                    <div class="item"><img src="css/img/carousel/6.jpg"></div>
+                    <div class="item"><img src="css/img/carousel/7.jpg"></div>
+                    <div class="item"><img src="css/img/carousel/8.jpg"></div>
+                </div>
             </div>
         </div>
+        <div class="column">
+            <h1 class="title has-text-centered">MERCHANDISE<span><img src="css/img/medialogos/merch-logo.png" width="7%"></span></h1>
+                <img id="img-shirt" src="css/img/merchandise/shirt01.jpg" width="98%">
+            <button class="button is-medium" onclick="window.location.href='requestForm.php'">
+                ORDER NOW </button><br>
+        </div>
     </div>
-
     <section class="footer">
         <center>
             <p class="subtitle">Made by <strong><a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/">LCC-Bais InfoMedia</a></strong></p>
@@ -223,7 +215,7 @@ clearBrowserCache();
             $('.owl-carousel').owlCarousel({
                 autoplay: true,
                 center: true,
-                item: 4,
+                item: 8,
                 loop: true,
                 margin: 10,
                 responsive: {
@@ -231,10 +223,10 @@ clearBrowserCache();
                         items: 1
                     },
                     600: {
-                        items: 2
+                        items: 1
                     },
                     1000: {
-                        items: 2
+                        items: 1
                     }
                 }
             });

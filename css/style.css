@@ -114,14 +114,6 @@ nav {
         width: 27% !important;
     }
 
-    #features {
-        height: auto !important;
-    }
-
-    #features {
-        padding-bottom: 70px !important;
-    }
-
     #news-updates {
         padding-bottom: 70px !important;
     }
@@ -172,16 +164,8 @@ nav {
         width: 12% !important;
     }
 
-    #features > div > div > center > img {
-        width: 100% !important;
-        height: 100% !important;
-    }
 }
 
-#features {
-    padding-top: 70px;
-    padding-bottom: 100px;
-}
 
 #news-updates {
     padding-bottom: 100px;
