@@ -31,7 +31,7 @@
 
         /* image of the article */
         .news-012 {
-            background: url(css/img/news01/bgimg/news01bgimg.JPG) no-repeat center center;
+            background: url(css/img/news01/bgimg/news01bgimg.jpg) no-repeat center center;
             background-size: cover;
         }
 
@@ -58,10 +58,9 @@
     <!-- the body of the article-->
     <div class="container para-news"><br>
         <p class="subtitle"><?php echo''.$news_last[7].'' ?></p>
-        <p class="subtitle has-text-centered"><?php echo ''.$news_last[3].''; ?>
-        <br><br><?php echo ''.$news_last[4].''; ?>
-        <br><br><?php echo ''.$news_last[5].''; ?>
-        </p><br>
+        <p class="subtitle has-text-centered"><?php echo ''.$news_last[3].''; ?><br>
+        <p class="subtitle has-text-centered"><?php echo ''.$news_last[4].''; ?></p><br>
+        <p class="subtitle has-text-centered"><?php echo ''.$news_last[5].''; ?></p><br>
     </div>
 
     <br>

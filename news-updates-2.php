@@ -31,7 +31,7 @@
 
         /* image of the article */
         .news-012 {
-            background: url(css/img/news03/bgimg/news03bgimg.JPG) no-repeat center center;
+            background: url(css/img/news03/bgimg/news03bgimg.jpg) no-repeat center center;
             background-size: cover;
         }
 

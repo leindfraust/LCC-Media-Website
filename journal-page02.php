@@ -16,7 +16,7 @@
         $Paragraph_3 = mysqli_real_escape_string($db, $_POST['paragraph3']);
         $Date = $_POST['date'];
         
-        $query = "INSERT INTO news02(Author,Title, Summary, Paragraph_1, Paragraph_2, Paragraph_3, Date) VALUES('$Author','$Summary', '$Paragraph_1', '$Paragraph_2', '$Paragraph_3', '$Title', '$Date')"; 
+        $query = "INSERT INTO news02(Author, Summary, Paragraph_1, Paragraph_2, Paragraph_3, Title, Date) VALUES('$Author','$Summary', '$Paragraph_1', '$Paragraph_2', '$Paragraph_3', '$Title', '$Date')"; 
 
 
         if(mysqli_query($db, $query)) {
