@@ -39,7 +39,7 @@ clearBrowserCache();
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css.map">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?=v.2.88">
+    <link rel="stylesheet" type="text/css" href="css/style.css?=v.2.888">
     <script src="scripts/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
@@ -137,7 +137,7 @@ clearBrowserCache();
         </div>
     </div><br>
 
-    <div id="news-updates" class="container innerNewsUpdate"><br>
+    <div id="news-updates" class="container innerNoPadding"><br>
         <p class="title has-text-centered"> News and Events <span><img src="css/img/medialogos/news-logo.png" width="7%"></span> </p><br>
         <div class="columns">
             <p class="column subtitle has-text-centered"><b><?php echo ''.$featured[1].''?></b><br><br><?php echo ''.$featured[2].''?></p>
@@ -165,7 +165,7 @@ clearBrowserCache();
     </div>
 
     <div class="columns inner">
-        <div class="column inner">
+        <div class="column innerNoPadding">
             <h1 class="title has-text-centered" id="gallery">FEATURED PHOTOS<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
             <div>
                 <br>
@@ -188,6 +188,7 @@ clearBrowserCache();
                 ORDER NOW </button><br>
         </div>
     </div><br>
+
     <section class="footer">
         <center>
             <p class="subtitle">Made by <strong><a href="https://www.facebook.com/INFO-MEDIA-LCC-1880646818710214/">LCC-Bais InfoMedia</a></strong></p>
@@ -201,7 +202,7 @@ clearBrowserCache();
         </center>
     </section>
 
-    <script src="scripts/functionjs.js?v.1.5">
+    <script src="scripts/functionjs.js?v.1.6">
     </script>
     <script src="scripts/anchorlink.js">
     </script>

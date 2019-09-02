@@ -168,7 +168,6 @@ nav {
 
 
 #news-updates {
-    padding-bottom: 100px;
     padding-top: 12px;
     border-top: 15px solid transparent;
 }
@@ -195,10 +194,6 @@ nav {
 .bg-nu {
     padding: 15px;
     border-radius: 12px;
-}
-
-#news-updates > .container > p {
-    padding-top: 50px;
 }
 
 .hero .title,
@@ -239,7 +234,7 @@ nav {
     border-radius: 12px;
 }
 
-.innerNewsUpdate {
+.innerNoPadding {
     border: 1px solid transparent;
     overflow: hidden;
     border-radius: 12px;

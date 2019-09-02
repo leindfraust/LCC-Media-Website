@@ -30,7 +30,7 @@ function nightMode() {
 
     let nightInner = document.getElementsByClassName("inner");
 
-    let nightInnerNewsUpdate = document.getElementsByClassName("innerNewsUpdate");
+    let nightInnerNoPadding = document.getElementsByClassName("innerNoPadding");
     
     let nightFooter = document.getElementsByClassName("footer");
 
@@ -95,13 +95,13 @@ function nightMode() {
         }
     }
     
-    for (let i = 0; i < nightInnerNewsUpdate.length; i++) {
-        if (nightInnerNewsUpdate[i].style.backgroundColor === "") {
-            nightInnerNewsUpdate[i].style.backgroundColor = "#243447";
-            nightInnerNewsUpdate[i].style.borderStyle = "hidden";
+    for (let i = 0; i < nightInnerNoPadding.length; i++) {
+        if (nightInnerNoPadding[i].style.backgroundColor === "") {
+            nightInnerNoPadding[i].style.backgroundColor = "#243447";
+            nightInnerNoPadding[i].style.borderStyle = "hidden";
         } else {
-            nightInnerNewsUpdate[i].style.backgroundColor = "";
-            nightInnerNewsUpdate[i].style.borderStyle = "solid";
+            nightInnerNoPadding[i].style.backgroundColor = "";
+            nightInnerNoPadding[i].style.borderStyle = "solid";
         }
     }
 }
