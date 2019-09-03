@@ -40,7 +40,11 @@
             width: 42.7%;
             border-top-right-radius: 12px;
         }
-
+        @media only screen and (max-width: 1000px) {
+            h1 {
+                width: 0 !important;
+            }
+        }
     </style>
 </head>
 
