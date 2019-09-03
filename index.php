@@ -39,7 +39,7 @@ clearBrowserCache();
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.css.map">
     <link rel="stylesheet" href="css/bulma-0.7.1/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?=v.2.888">
+    <link rel="stylesheet" type="text/css" href="css/style.css?=v.2.8988">
     <script src="scripts/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
@@ -160,9 +160,9 @@ clearBrowserCache();
         </div>
     </div>
 
-    <div class="columns inner">
+    <div class="columns inner" id="galleryFeatures">
         <div class="column innerNoPadding">
-            <h1 class="title has-text-centered" id="galleryFeatures">FEATURED PHOTOS<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
+            <h1 class="title has-text-centered">FEATURED PHOTOS<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
             <div>
                 <br>
                 <div class="owl-carousel owl-theme">
