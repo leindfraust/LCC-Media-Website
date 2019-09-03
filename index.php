@@ -66,11 +66,8 @@ clearBrowserCache();
                 <a class="navbar-item" href="#news-updates">
                     <h2 class="has-text-white"> News and Events </h2>
                 </a>
-                <a class="navbar-item" href="#gallery">
-                    <h2 class="has-text-white"> Featured Photos</h2>
-                </a>
-                <a class="navbar-item" href="#features">
-                    <h2 class="has-text-white"> Merchandise </h2>
+                <a class="navbar-item" href="#galleryFeatures">
+                    <h2 class="has-text-white"> Featured Photos and Merchandise</h2>
                 </a>
             </div>
             <div class="navbar-end">
@@ -94,8 +91,7 @@ clearBrowserCache();
             <div class="overlay-content">
                 <p class="subtitle"><a onclick="closeNav()" href="#home">Home</a></p>
                 <p class="subtitle"><a onclick="closeNav()" href="#news-updates">News and Events</a></p>
-                <p class="subtitle"><a onclick="closeNav()" href="#gallery">Featured Photos</a></p>
-                <p class="subtitle"><a onclick="closeNav()" href="#features">Merchandise</a></p>
+                <p class="subtitle"><a onclick="closeNav()" href="#galleryFeatures">Featured Photos and Merchandise</a></p>  
             </div>
         </div>
 
@@ -166,7 +162,7 @@ clearBrowserCache();
 
     <div class="columns inner">
         <div class="column innerNoPadding">
-            <h1 class="title has-text-centered" id="gallery">FEATURED PHOTOS<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
+            <h1 class="title has-text-centered" id="galleryFeatures">FEATURED PHOTOS<span><img src="css/img/medialogos/gallery-logo-1.png" width="7%"></span></h1>
             <div>
                 <br>
                 <div class="owl-carousel owl-theme">
