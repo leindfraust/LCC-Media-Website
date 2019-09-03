@@ -14,6 +14,7 @@
         $Paragraph_1 = mysqli_real_escape_string($db, $_POST['paragraph1']);
         $Paragraph_2 = mysqli_real_escape_string($db, $_POST['paragraph2']);
         $Paragraph_3 = mysqli_real_escape_string($db, $_POST['paragraph3']);
+        $Title = $_POST['title'];
         $Date = $_POST['date'];
         
         $query = "INSERT INTO news02(Author, Summary, Paragraph_1, Paragraph_2, Paragraph_3, Title, Date) VALUES('$Author','$Summary', '$Paragraph_1', '$Paragraph_2', '$Paragraph_3', '$Title', '$Date')"; 
