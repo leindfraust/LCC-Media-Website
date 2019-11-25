@@ -91,7 +91,7 @@ clearBrowserCache();
             <div class="overlay-content">
                 <p class="subtitle"><a onclick="closeNav()" href="#home">Home</a></p>
                 <p class="subtitle"><a onclick="closeNav()" href="#news-updates">News and Events</a></p>
-                <p class="subtitle"><a onclick="closeNav()" href="#galleryFeatures">Featured Photos and Merchandise</a></p>  
+                <p class="subtitle"><a onclick="closeNav()" href="#galleryFeatures">Featured Photos and Merchandise</a></p>
             </div>
         </div>
 
