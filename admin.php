@@ -29,18 +29,22 @@ include 'scripts/config.php';
         .input {
             width: 50%;
         }
+
         form {
             margin-top: 10%;
         }
+
         @media screen and (max-width: 1000px) {
             .input {
                 width: 40% !important;
             }
+
             h1 {
                 width: 100% !important;
                 padding: 5 !important;
             }
         }
+
     </style>
 </head>
 
