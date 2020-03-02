@@ -56,8 +56,6 @@
                     <td>{{ order.Status }}</td>
                 </tr>
             </table><br><br>
-            <label class="label">OIG</label><input type="text" class="input" v-model="OIG" name="OIG" placeholder="e.g MAZU0000000">
-            <label class="label">Shirt Type</label><input type="text" class="input" v-model="ShirtType" name="ShirtType" placeholder="e.g TRSNG, HL ...">
             <label class="label">ID</label><input type="text" class="input" v-model="ID" name="ID" placeholder="e.g 00001, 00002 ...">
             <br>
             <button class="button is-primary" @click='trackIt()'>Track Order</button>
@@ -72,17 +70,13 @@
             el: '#track',
             data: {
                 orders: "",
-                OIG: "",
-                ShirtType: "",
                 ID: ""
             },
             methods: {
                 trackIt: function() {
                     axios.get('scripts/orderTrack.php', {
                             params: {
-                                ID: this.ID,
-                                OIG: this.OIG,
-                                ShirtType: this.ShirtType
+                                ID: this.ID
                             }
                         })
                         .then(function(response) {

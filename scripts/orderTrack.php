@@ -3,11 +3,9 @@ include 'config.php';
 
 
 $getID = $_GET['ID'];
-$getST = $_GET['ShirtType'];
-$getOIG = $_GET['OIG'];
 
 
-$userData = mysqli_query($con,"SELECT * from orderlist WHERE ID='$getID' AND OIG='$getOIG' AND ShirtType='$getST' ");
+$userData = mysqli_query($con,"SELECT * from orderlist WHERE ID='$getID'");
 
 $response = array();
 
